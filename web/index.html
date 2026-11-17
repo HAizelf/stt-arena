@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>stt-arena</title>
+<style>
+:root {
+  --bg:#f6f6f3; --card:#fff; --ink:#1c1c1a; --muted:#6c6c66; --line:#e3e3de; --soft:#f0f0ec;
+  --accent:#2f5bd3; --low:#fde7b0; --lowink:#6b4a00; --event:#7a5cc7;
+  --pass:#1f7a45; --passbg:#dcf1e3; --fail:#b3261e; --failbg:#f8dcda; --ok:#1f7a45;
+  --chip:#ecebe6; --chip2:#e7eef8;
+  --ref:#e6eef9; --refhead:#d4e1f3; --refink:#2d4166; --refline:#8ea9d6;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg:#141413; --card:#1e1e1c; --ink:#ecece7; --muted:#9b9b94; --line:#2f2f2c; --soft:#262624;
+  --accent:#8aa8ff; --low:#5a4512; --lowink:#ffe3a3; --event:#b9a2ff;
+  --pass:#7fd6a0; --passbg:#1d3a28; --fail:#ff9b94; --failbg:#45201e; --ok:#7fd6a0;
+  --chip:#2c2c29; --chip2:#24314a;
+  --ref:#1b2639; --refhead:#233250; --refink:#b6c6e4; --refline:#5470a8;
+} }
+* { box-sizing:border-box }
+html, body { height:100% }
+body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.5 -apple-system,system-ui,sans-serif;
+  display:flex; flex-direction:column; overflow:hidden }
+header.top { flex:none; z-index:5; background:var(--bg); border-bottom:1px solid var(--line);
+  padding:12px 16px; display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center }
+h1 { font-size:17px; margin:0 }
+h1 small { color:var(--muted); font-weight:400; font-size:13px; margin-left:6px }
+.view { flex:1; min-height:0; display:flex; flex-direction:column }
+.view[hidden] { display:none }
+#view-results { overflow:auto }
+.toggle { display:inline-flex; background:var(--soft); border:1px solid var(--line); border-radius:8px; padding:2px }
+.toggle button { font:inherit; font-size:13px; border:0; background:none; color:var(--muted); padding:4px 14px;
+  border-radius:6px; cursor:pointer }
+.toggle button[aria-selected="true"] { background:var(--card); color:var(--ink); font-weight:600;
+  box-shadow:0 1px 2px rgba(0,0,0,.08) }
+body.results .data-only { display:none }
+.progress { color:var(--muted); font-variant-numeric:tabular-nums }
+.bar { width:120px; height:6px; background:var(--soft); border-radius:3px; overflow:hidden; display:inline-block; vertical-align:middle; margin-left:6px }
+.bar i { display:block; height:100%; background:var(--ok) }
+.controls { display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-left:auto; color:var(--muted); font-size:13px }
+select, input[type=range] { font:inherit; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:6px; padding:2px 6px }
+.help { flex:none; margin:0; padding:8px 16px 0; color:var(--muted); font-size:12.5px }
+.wrap { flex:1; min-height:0; overflow:auto; margin:8px 16px 16px; border:1px solid var(--line); border-radius:10px }
+table { border-collapse:separate; border-spacing:0; width:100%; min-width:900px }
+th { text-align:left; font-size:12px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.03em;
+  padding:9px 10px; border-bottom:1px solid var(--line); background:var(--bg);
+  position:sticky; top:0; z-index:3; white-space:nowrap }
+th:first-child { left:0; z-index:4 }
+td { vertical-align:top; padding:12px 10px; border-bottom:1px solid var(--line); background:var(--card); height:1px }
+tr.active td { background:color-mix(in srgb, var(--accent) 6%, var(--card)) }
+/* Reference zone (clip + golden): tinted so it reads apart from the model columns */
+td.clip, td.gold { background:var(--ref) }
+tr.active td.clip, tr.active td.gold { background:color-mix(in srgb, var(--accent) 9%, var(--ref)) }
+th.ref { background:var(--refhead); color:var(--refink); border-bottom:2px solid var(--refline) }
+td.gold, th.ref-last { border-right:2px solid var(--refline) }
+td.clip, td.gold { border-bottom-color:color-mix(in srgb, var(--refline) 35%, var(--ref)) }
+td.gold textarea { background:var(--card) }
+td.clip { position:sticky; left:0; z-index:1; width:320px; min-width:280px }
+.ds { margin:8px 0 4px; color:var(--refink); opacity:.85; font-size:13px }
+td.gold { width:45%; min-width:360px }
+td.cand { min-width:240px; max-width:300px }
+.cell { display:flex; flex-direction:column; height:100%; gap:8px }
+.cell .resp { flex:1 }
+.cell .judge { border-top:1px dashed var(--line); padding-top:7px; display:flex; flex-wrap:wrap; gap:4px 8px; align-items:center }
+.meta { display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-bottom:6px }
+.num { color:var(--muted); font-variant-numeric:tabular-nums; font-size:12px }
+.chip { font-size:11.5px; padding:1px 8px; border-radius:999px; background:var(--chip) }
+.chip.accent { background:var(--chip2) }
+audio { width:100%; height:32px }
+.src { display:block; margin-top:4px; color:var(--muted); font-size:11.5px; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+.src:hover { text-decoration:underline }
+.words { line-height:1.9; margin-bottom:8px }
+.words .label { color:var(--muted); font-size:11.5px; margin-right:4px }
+.w { cursor:pointer; border-radius:3px; padding:0 1px }
+.w:hover { outline:1px solid var(--accent) }
+.w.low { background:var(--low); color:var(--lowink) }
+.w.ev { color:var(--event); font-style:italic }
+.w.now { outline:2px solid var(--accent) }
+textarea { width:100%; min-height:74px; resize:vertical; font:inherit; color:var(--ink); background:var(--soft);
+  border:1px solid var(--line); border-radius:8px; padding:8px }
+textarea:focus { outline:2px solid var(--accent); outline-offset:-1px; background:var(--card) }
+.row-actions { display:flex; gap:12px; align-items:center; margin-top:6px; font-size:12.5px; color:var(--muted) }
+.row-actions label { display:flex; gap:5px; align-items:center; cursor:pointer; color:var(--ink) }
+.row-actions button { font:inherit; font-size:12px; background:none; border:none; color:var(--accent); cursor:pointer; padding:0 }
+.status { margin-left:auto; font-variant-numeric:tabular-nums }
+.edited { color:var(--accent) }
+.empty { color:var(--muted); font-style:italic }
+.verdict { display:inline-block; position:relative; cursor:help; font-size:11.5px; font-weight:600; padding:1px 8px; border-radius:999px }
+.verdict.pass { background:var(--passbg); color:var(--pass) } .verdict.fail { background:var(--failbg); color:var(--fail) }
+.verdict.none { background:var(--soft); color:var(--muted); cursor:default; font-weight:500 }
+.verdict[data-tip]:hover::after, .verdict[data-tip]:focus::after {
+  content:attr(data-tip); position:absolute; left:0; bottom:calc(100% + 6px); z-index:10;
+  width:280px; white-space:pre-line; font-weight:400; font-size:12.5px; line-height:1.45;
+  background:var(--ink); color:var(--bg); padding:8px 10px; border-radius:8px; box-shadow:0 4px 14px rgba(0,0,0,.18) }
+.stat { color:var(--muted); font-size:12px }
+.flag { color:var(--fail); font-size:11.5px }
+.summary { padding:18px 16px 32px; overflow-x:auto }
+.summary h2 { font-size:16px; margin:0 0 10px }
+.summary table { min-width:760px; width:auto; border:1px solid var(--line); border-radius:10px; overflow:hidden }
+.summary th { position:static }
+.summary td, .summary th { padding:6px 12px; background:var(--card); font-variant-numeric:tabular-nums }
+.summary td.num-c { text-align:right }
+.summary .best { color:var(--pass); font-weight:600 }
+.summary .worst { color:var(--fail) }
+.summary .note { color:var(--muted); font-size:12px; margin:10px 0 0; max-width:900px }
+@media (max-width:700px) { td.clip { position:static } }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>stt-arena<small id="dsname"></small></h1>
+  <div class="toggle" role="tablist" aria-label="View">
+    <button role="tab" data-view="data" aria-selected="true">Data</button>
+    <button role="tab" data-view="results" aria-selected="false">Results</button>
+  </div>
+  <span class="progress" id="progress">loading…</span>
+  <div class="controls data-only">
+    <label>Show <select id="filter"></select></label>
+    <label>Speed <select id="speed"><option>1</option><option>0.9</option><option>0.8</option><option>0.7</option></select></label>
+    <label>Highlight words below <input id="thr" type="range" min="0.3" max="0.95" step="0.05" value="0.7"> <span id="thrv">70%</span> confidence</label>
+  </div>
+</header>
+<section id="view-data" class="view">
+<p class="help">Click a draft word to play from there. Highlighted words are ones the draft model was unsure of. Edits save automatically.
+<b>⌘/Ctrl+Enter</b> in the text box marks the clip verified and plays the next clip. <b>Space</b> (outside a text box) plays or pauses. Hover a PASS/FAIL chip for the judge's reason.</p>
+<div class="wrap"><table>
+  <thead><tr id="head"></tr></thead>
+  <tbody id="body"></tbody>
+</table></div>
+</section>
+<section id="view-results" class="view" hidden>
+  <div id="summary" class="summary"></div>
+</section>
+
+<script>
+let data = {rows:[], models:[]}, current = null, speed = 1;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pretty = s => String(s ?? '').replace(/^en-/, '').replace(/_/g, ' ');
+
+async function load() {
+  data = await (await fetch('/api/rows')).json();
+  $('#dsname').textContent = data.dataset ? `· ${data.dataset}` : '';
+  buildFilter();
+  render();
+}
+
+function buildFilter() {
+  const accents = [...new Set(data.rows.map(r => r.accent).filter(Boolean))].sort();
+  const domains = [...new Set(data.rows.map(r => r.domain).filter(Boolean))].sort();
+  $('#filter').innerHTML = '<option value="all">All</option><option value="todo">Unverified</option><option value="done">Verified</option>' +
+    (accents.length ? `<optgroup label="Accent">${accents.map(a => `<option value="a:${esc(a)}">${esc(pretty(a))}</option>`).join('')}</optgroup>` : '') +
+    (domains.length ? `<optgroup label="Domain">${domains.map(d => `<option value="d:${esc(d)}">${esc(d)}</option>`).join('')}</optgroup>` : '');
+}
+
+function render() {
+  $('#head').innerHTML = '<th class="ref">Clip · reference transcript</th><th class="ref ref-last">Golden (verbatim draft → your edit)</th>' +
+    data.models.map(m => `<th>${esc(m)}</th>`).join('');
+  $('#body').innerHTML = data.rows.map((r, i) => rowHtml(r, i)).join('');
+  data.rows.forEach((r, i) => wire(r, i));
+  applyFilter(); paintLow(); updateProgress(); renderSummary();
+}
+
+function renderSummary() {
+  const s = data.summary || {}, ms = data.models.filter(m => s[m]);
+  if (!ms.length) { $('#summary').innerHTML = '<p class="note">No results yet: run scripts/run_candidates.py, scripts/judge.py and scripts/score.py.</p>'; return; }
+  const cols = [
+    ['Judge pass', m => s[m].pass_rate, v => v == null ? '–' : `${Math.round(v*100)}%`, 'max'],
+    ['WER', m => s[m].wer, v => `${(v*100).toFixed(1)}%`, 'min'],
+    ['Filler recall', m => s[m].filler_recall, (v, m) => v == null ? '–' : `${Math.round(v*100)}% (${s[m].fillers})`, 'max'],
+    ['Latency p50', m => s[m].latency_p50_ms, v => v == null ? '–' : `${Math.round(v)} ms`, 'min'],
+    ['Latency p95', m => s[m].latency_p95_ms, v => v == null ? '–' : `${Math.round(v)} ms`, 'min'],
+    ['Empty', m => s[m].empty, v => v ?? '–', 'min'],
+    ['Needed flush', m => s[m].needed_flush, v => v, 'min'],
+    ['Revised finals', m => s[m].revised_clips, v => v ?? '–', 'min'],
+    ['Errors', m => s[m].errors, v => v, 'min'],
+    ['$/min', m => s[m].usd_per_min, v => v == null ? '–' : `$${v.toFixed(4)}`, 'min'],
+    ['Languages', m => s[m].multilingual, v => v == null ? '–' : v ? 'multilingual' : 'English only', null],
+  ];
+  const mark = (col, m) => {
+    if (!col[3]) return '';
+    const vals = ms.map(col[1]).filter(v => v != null);
+    const v = col[1](m);
+    if (v == null || new Set(vals).size < 2) return '';
+    const best = col[3] === 'min' ? Math.min(...vals) : Math.max(...vals);
+    const worst = col[3] === 'min' ? Math.max(...vals) : Math.min(...vals);
+    return v === best ? 'best' : v === worst ? 'worst' : '';
+  };
+  $('#summary').innerHTML = `<h2>Model summary (${s[ms[0]].clips} clips)</h2><table>
+    <thead><tr><th>Model</th>${cols.map(c => `<th>${c[0]}</th>`).join('')}</tr></thead>
+    <tbody>${ms.map(m => `<tr><td>${esc(m)}</td>${cols.map(c => `<td class="num-c ${mark(c, m)}">${c[2](c[1](m), m)}</td>`).join('')}</tr>`).join('')}</tbody>
+  </table><p class="note">Judge pass: an LLM judge checks whether the transcript keeps the meaning of the golden (prompts/judge.md).
+  WER ignores fillers, punctuation, casing and number formatting. Filler recall counts the speaker's uh/um/er kept.
+  Latency runs from end of speech to the last final transcript; for turn-aware models it includes their end-of-turn decision, so compare like with like.
+  "Empty" counts clips with no final transcript at all, even after 6 s of silence. "Needed flush" counts clips that only finalised after the stream was closed; live, both would leave the turn hanging.
+  "Revised finals" counts clips where the provider re-sent a final for the same audio (scored on its latest version).</p>`;
+}
+
+function rowHtml(r, i) {
+  const words = r.words.length
+    ? '<span class="label">draft:</span>' + r.words.map((w, j) => `<span class="w${w.type === 'audio_event' ? ' ev' : ''}" data-j="${j}" data-p="${w.logprob == null ? 1 : Math.exp(w.logprob)}" title="${w.logprob == null ? '' : Math.round(Math.exp(w.logprob)*100) + '% · '}${(w.start ?? 0).toFixed(2)}s">${esc(w.text)}</span>`).join(' ')
+    : '<span class="empty">No draft yet: run scripts/draft_golden.py</span>';
+  const cands = data.models.map(m => {
+    const c = r.candidates[m];
+    if (!c) return '<td class="cand"><span class="empty">not run</span></td>';
+    const tip = [c.error_type && c.error_type !== 'none' ? `Error: ${c.error_type.replace(/_/g, ' ')}` : '', c.reason || '']
+      .filter(Boolean).join('\n');
+    const v = c.pass == null
+      ? '<span class="verdict none">not judged</span>'
+      : `<span class="verdict ${c.pass ? 'pass' : 'fail'}" tabindex="0" data-tip="${esc(tip || (c.pass ? 'Meaning preserved.' : 'No reason given.'))}">${c.pass ? 'PASS' : 'FAIL'}</span>`;
+    const stats = [c.wer != null && `WER ${(c.wer*100).toFixed(1)}%`,
+      c.fillers_total ? `fillers ${c.fillers_hit}/${c.fillers_total}` : null,
+      c.latency_ms != null && `${Math.round(c.latency_ms)} ms`].filter(Boolean).join(' · ');
+    const flags = [c.needed_flush && 'needed flush', c.revised_finals && `${c.revised_finals} revised final(s)`,
+      c.out_of_order && 'finals out of order', c.error && `error: ${c.error}`].filter(Boolean);
+    return `<td class="cand"><div class="cell">
+      <div class="resp">${esc(c.text) || '<span class="empty">(empty)</span>'}</div>
+      <div class="judge">${v}${stats ? `<span class="stat">${stats}</span>` : ''}${flags.length ? `<span class="flag">${esc(flags.join(' · '))}</span>` : ''}</div>
+    </div></td>`;
+  }).join('');
+  const src = r.source || {};
+  const srcText = [src.dataset, src.start != null ? `${src.start.toFixed(1)}–${(src.end ?? 0).toFixed(1)}s` : ''].filter(Boolean).join(' · ');
+  const srcLink = src.dataset ? `https://huggingface.co/datasets/${src.dataset}` : '';
+  return `<tr data-i="${i}">
+    <td class="clip"><div class="meta"><span class="num">${String(i+1).padStart(2,'0')}</span>
+      ${r.accent ? `<span class="chip accent">${esc(pretty(r.accent))}</span>` : ''}
+      ${r.domain ? `<span class="chip">${esc(r.domain)}</span>` : ''}</div>
+      <audio controls preload="none" src="clips/${esc(r.id)}.mp3"></audio>
+      <p class="ds">${esc(r.reference ?? '')}</p>
+      ${srcLink ? `<a class="src" href="${esc(srcLink)}" target="_blank" rel="noopener" title="${esc(src.file || '')}">${esc(srcText)} ↗</a>` : ''}</td>
+    <td class="gold"><div class="words">${words}</div>
+      <textarea spellcheck="true" placeholder="Golden transcript">${esc(r.golden ?? r.draft ?? '')}</textarea>
+      <div class="row-actions">
+        <label><input type="checkbox" class="ver" ${r.verified ? 'checked' : ''}> Verified</label>
+        <button class="reset" type="button" ${r.draft == null ? 'hidden' : ''}>Reset to draft</button>
+        <span class="status"></span>
+      </div></td>${cands}</tr>`;
+}
+
+function wire(r, i) {
+  const tr = document.querySelector(`tr[data-i="${i}"]`);
+  const audio = tr.querySelector('audio'), ta = tr.querySelector('textarea');
+  const status = tr.querySelector('.status'), ver = tr.querySelector('.ver');
+  const ws = [...tr.querySelectorAll('.w')];
+  let timer;
+
+  const showStatus = (msg) => {
+    const edited = r.draft != null && ta.value.trim() !== r.draft.trim();
+    status.innerHTML = (edited ? '<span class="edited">differs from draft</span> · ' : '') + msg;
+  };
+  const save = async (patch) => {
+    showStatus('saving…');
+    const res = await fetch('/api/golden', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({id: r.id, ...patch})});
+    if (!res.ok) { status.textContent = 'save failed'; return; }
+    Object.assign(r, 'text' in patch ? {golden: patch.text} : {}, 'verified' in patch ? {verified: patch.verified} : {});
+    showStatus('saved'); updateProgress();
+  };
+
+  audio.addEventListener('play', () => {
+    document.querySelectorAll('audio').forEach(a => a !== audio && a.pause());
+    audio.playbackRate = speed; setCurrent(i);
+  });
+  audio.addEventListener('timeupdate', () => {
+    ws.forEach(el => {
+      const w = r.words[el.dataset.j];
+      el.classList.toggle('now', !audio.paused && w.start != null && audio.currentTime >= w.start && audio.currentTime <= w.end + 0.05);
+    });
+  });
+  ws.forEach(el => el.addEventListener('click', () => {
+    audio.currentTime = Math.max(0, (r.words[el.dataset.j].start ?? 0) - 0.25);
+    audio.play();
+  }));
+  ta.addEventListener('focus', () => setCurrent(i));
+  ta.addEventListener('input', () => { clearTimeout(timer); showStatus('…'); timer = setTimeout(() => save({text: ta.value}), 700); });
+  ta.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault(); clearTimeout(timer);
+      ver.checked = true; save({text: ta.value, verified: true});
+      const next = [...document.querySelectorAll('#body tr')].slice(i + 1).find(t => t.style.display !== 'none');
+      if (next) { next.scrollIntoView({behavior:'smooth', block:'center'}); next.querySelector('textarea').focus({preventScroll:true}); next.querySelector('audio').play(); }
+    }
+  });
+  ver.addEventListener('change', () => save({verified: ver.checked}));
+  tr.querySelector('.reset').addEventListener('click', () => {
+    if (r.draft == null) return;
+    ta.value = r.draft; clearTimeout(timer); save({text: r.draft});
+  });
+  if (r.golden != null || r.draft != null) showStatus(r.verified ? 'verified' : '');
+}
+
+function setCurrent(i) {
+  current = i;
+  document.querySelectorAll('#body tr').forEach(t => t.classList.toggle('active', +t.dataset.i === i));
+}
+function paintLow() {
+  const thr = +$('#thr').value;
+  $('#thrv').textContent = Math.round(thr * 100) + '%';
+  document.querySelectorAll('.w').forEach(el => el.classList.toggle('low', !el.classList.contains('ev') && +el.dataset.p < thr));
+}
+function applyFilter() {
+  const f = $('#filter').value || 'all';
+  document.querySelectorAll('#body tr').forEach(t => {
+    const r = data.rows[t.dataset.i];
+    const show = f === 'all' || (f === 'todo' && !r.verified) || (f === 'done' && r.verified)
+      || (f.startsWith('a:') && r.accent === f.slice(2)) || (f.startsWith('d:') && r.domain === f.slice(2));
+    t.style.display = show ? '' : 'none';
+  });
+}
+function updateProgress() {
+  const n = data.rows.length, v = data.rows.filter(r => r.verified).length;
+  const drafted = data.rows.filter(r => r.draft != null).length;
+  $('#progress').innerHTML = `${v}/${n} verified · ${drafted}/${n} drafted <span class="bar"><i style="width:${n ? v/n*100 : 0}%"></i></span>`;
+}
+
+function setView(view) {
+  view = view === 'results' ? 'results' : 'data';
+  document.querySelectorAll('.toggle button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === view)));
+  $('#view-data').hidden = view !== 'data';
+  $('#view-results').hidden = view !== 'results';
+  document.body.classList.toggle('results', view === 'results');
+  if (view === 'results') document.querySelectorAll('audio').forEach(a => a.pause());
+  if (location.hash !== '#' + view) history.replaceState(null, '', '#' + view);
+}
+document.querySelectorAll('.toggle button').forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+window.addEventListener('hashchange', () => setView(location.hash.slice(1)));
+setView(location.hash.slice(1));
+
+$('#filter').addEventListener('change', applyFilter);
+$('#thr').addEventListener('input', paintLow);
+$('#speed').addEventListener('change', e => { speed = +e.target.value; document.querySelectorAll('audio').forEach(a => a.playbackRate = speed); });
+document.addEventListener('keydown', e => {
+  if (e.code !== 'Space' || document.body.classList.contains('results') ||
+      ['TEXTAREA','INPUT','SELECT','BUTTON'].includes(e.target.tagName)) return;
+  e.preventDefault();
+  const tr = current != null ? document.querySelector(`tr[data-i="${current}"]`) : [...document.querySelectorAll('#body tr')].find(t => t.style.display !== 'none');
+  if (!tr) return;
+  const a = tr.querySelector('audio'); a.paused ? a.play() : a.pause();
+});
+load();
+</script>
+</body>
+</html>

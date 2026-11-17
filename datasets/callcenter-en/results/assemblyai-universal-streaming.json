@@ -1,0 +1,689 @@
+{
+ "en_au_01": {
+  "text": "It's this Saturday night, 14th of December at 7 30. I wish I could make it. I bought the tickets about three weeks ago.",
+  "finals": [
+   {
+    "text": "It's this Saturday night, 14th of December at 7 30. I wish I could make it. I bought the tickets about three weeks ago.",
+    "start": 0.96,
+    "end": 6.88
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 684.2021660413593,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.04,
+  "fillers_total": 0,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved; '7 30' is time formatting."
+ },
+ "en_au_02": {
+  "text": "I guess that depends on the day. I guess I have my friends come over for a cup of tea sometimes and I don't work anymore.",
+  "finals": [
+   {
+    "text": "I guess that depends on the day. I guess I have my friends come over for a cup of tea sometimes and I don't work anymore.",
+    "start": 0.4800009536743164,
+    "end": 8.000000953674316
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 821.9069170299917,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.07142857142857142,
+  "fillers_total": 2,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved; only fillers dropped."
+ },
+ "en_ca_03": {
+  "text": "I just got it. Yep. So that should be good. Okay, then I think that's everything I need for you from you. If this",
+  "finals": [
+   {
+    "text": "I just got it. Yep. So that should be good.",
+    "start": 0.64,
+    "end": 2.4
+   },
+   {
+    "text": "Okay, then I think that's everything I need for you from you. If this",
+    "start": 4.16,
+    "end": 9.2
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 1059.726292034611,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.0,
+  "fillers_total": 4,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_ca_04": {
+  "text": "Yep. 31. 9988.",
+  "finals": [
+   {
+    "text": "Yep.",
+    "start": 1.44,
+    "end": 1.52
+   },
+   {
+    "text": "31.",
+    "start": 4.48,
+    "end": 6.800000000000001
+   },
+   {
+    "text": "9988.",
+    "start": 8.56,
+    "end": 9.600000000000001
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 409.8678749287501,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.7272727272727273,
+  "fillers_total": 1,
+  "fillers_hit": 0,
+  "pass": false,
+  "error_type": "number_or_entity",
+  "reason": "golden 'two zero four four three one' vs candidate '31' (leading 204 4 lost)"
+ },
+ "en_cn_05": {
+  "text": "Just no problem. My name is Linda Zhang, Zhan G. The dates for next Friday to next Sunday. Total is three nights.",
+  "finals": [
+   {
+    "text": "Just no problem. My name is Linda Zhang, Zhan G.",
+    "start": 0.96,
+    "end": 5.44
+   },
+   {
+    "text": "The dates for next Friday to next Sunday.",
+    "start": 6.8,
+    "end": 9.76
+   },
+   {
+    "text": "Total is three nights.",
+    "start": 12.08,
+    "end": 12.96
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 200.90020901989192,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.3076923076923077,
+  "fillers_total": 3,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Golden 'Z H A N G' vs candidate 'Zhan G' still recoverable."
+ },
+ "en_cn_06": {
+  "text": "I see. Okay. Also my last lab test was six months ago. Do I Be",
+  "finals": [
+   {
+    "text": "I see. Okay. Also my last lab test was six months ago. Do I",
+    "start": 0.6400009536743164,
+    "end": 10.560000953674317
+   },
+   {
+    "text": "Be",
+    "start": 10.880000953674317,
+    "end": 10.960000953674317
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 1888.793500023894,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.17647058823529413,
+  "fillers_total": 5,
+  "fillers_hit": 0,
+  "pass": false,
+  "error_type": "content_substitution",
+  "reason": "golden 'Do I need' vs candidate 'Do I Be'"
+ },
+ "en_gb_07": {
+  "text": "No, no, it's definitely not me. I thought I would do follow the updates to the teeth and do whatever is asked of me.",
+  "finals": [
+   {
+    "text": "No, no, it's definitely not me. I thought I would do follow the updates to the teeth and do whatever is asked of me.",
+    "start": 1.0400011920928955,
+    "end": 7.920001192092895
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 0.0,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.125,
+  "fillers_total": 2,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Follow-updates claim kept; 'to the teeth' garbles 'to the T'."
+ },
+ "en_gb_08": {
+  "text": "I don't know if you can provide sort of any information or check for me on sort of the available sizes and what colors you've got in those style jeans.",
+  "finals": [
+   {
+    "text": "I don't know if you can provide sort of any information or check for me on sort of the available sizes and what colors you've got in those style jeans.",
+    "start": 1.28,
+    "end": 11.12
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 772.3405830329284,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.06896551724137931,
+  "fillers_total": 3,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_gb_sct_09": {
+  "text": "Nobody. So Mark Douglas, M-E-R-C Douglas is D-O-U-G-L-A-S.",
+  "finals": [
+   {
+    "text": "Nobody. So Mark Douglas, M-E-R-C Douglas is D-O-U-G-L-A-S.",
+    "start": 0.88,
+    "end": 7.4399999999999995
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 0.0,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.16666666666666666,
+  "fillers_total": 3,
+  "fillers_hit": 0,
+  "pass": false,
+  "error_type": "number_or_entity",
+  "reason": "golden 'M-A-R-C' vs candidate 'M-E-R-C'"
+ },
+ "en_gb_sct_10": {
+  "text": "",
+  "finals": [],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": null,
+  "needed_flush": false,
+  "error": null,
+  "wer": 1.0,
+  "fillers_total": 1,
+  "fillers_hit": 0,
+  "pass": false,
+  "error_type": "omission",
+  "reason": "empty transcript"
+ },
+ "en_gb_wls_11": {
+  "text": "No, I think that's everything. Is it possible for me to give you guys a call back if I need any help?",
+  "finals": [
+   {
+    "text": "No, I think that's everything. Is it possible for me to give you guys a call back if I need any help?",
+    "start": 1.6800009536743163,
+    "end": 8.320000953674317
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 700.8197080576792,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.0,
+  "fillers_total": 2,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_gb_wls_12": {
+  "text": "Activities. We're only really putting aside about an hour to get these 200 people from one room of the center.",
+  "finals": [
+   {
+    "text": "Activities. We're only really putting aside about an hour to get these 200 people from one room of the center.",
+    "start": 0.6400009536743164,
+    "end": 8.640000953674317
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 686.0977079486474,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.09090909090909091,
+  "fillers_total": 0,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_ie_13": {
+  "text": "Oh, I didn't know you're able to do that. Could you hold it for 24 hours? I just need to double check the conference schedule to make sure I don't miss anything important on the, that Wednesday morning. That I won't be there for.",
+  "finals": [
+   {
+    "text": "Oh, I didn't know you're able to do that. Could you hold it for 24 hours? I just need to double check the conference schedule to make sure I don't miss anything important on the, that Wednesday morning. That I won't be there for.",
+    "start": 0.64,
+    "end": 9.440000000000001
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 685.0337499054149,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.0,
+  "fillers_total": 1,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_ie_14": {
+  "text": "Fidelma and I know we can't do it all at once. When I was in there with your Jerry, he was telling me about daily transfer limit, but sure I can't remember.",
+  "finals": [
+   {
+    "text": "Fidelma and I know we can't do it all at once. When I was in there with your Jerry, he was telling me about daily transfer limit, but sure I can't remember.",
+    "start": 0.8000011920928956,
+    "end": 9.600001192092897
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 739.0126249520108,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.08823529411764706,
+  "fillers_total": 1,
+  "fillers_hit": 0,
+  "pass": false,
+  "error_type": "number_or_entity",
+  "reason": "golden 'your Gerry' vs candidate 'your Jerry'"
+ },
+ "en_in_15": {
+  "text": "But the thing is there's a problem. I have already recharged my rental. Just for five hours. Ago for one month plan.",
+  "finals": [
+   {
+    "text": "But the thing is there's a problem.",
+    "start": 0.56,
+    "end": 1.36
+   },
+   {
+    "text": "I have already recharged my rental. Just for five hours. Ago for one month plan.",
+    "start": 3.04,
+    "end": 8.879999999999999
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 584.5208750106394,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.09090909090909091,
+  "fillers_total": 1,
+  "fillers_hit": 0,
+  "pass": false,
+  "error_type": "number_or_entity",
+  "reason": "golden 'Airtel' vs candidate 'rental'; 'four five hours' vs 'five hours'"
+ },
+ "en_in_16": {
+  "text": "Okay. So now here. Okay, overhead it has input 22 and 21 mbps. Still not 25, but it has improved.",
+  "finals": [
+   {
+    "text": "Okay.",
+    "start": 1.0400009536743164,
+    "end": 1.1200009536743165
+   },
+   {
+    "text": "So now here. Okay, overhead it has input 22 and 21 mbps.",
+    "start": 1.7600009536743164,
+    "end": 7.200000953674317
+   },
+   {
+    "text": "Still not 25, but it has improved.",
+    "start": 8.960000953674317,
+    "end": 10.720000953674317
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 785.5960410088301,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.2692307692307692,
+  "fillers_total": 0,
+  "fillers_hit": 0,
+  "pass": false,
+  "error_type": "content_substitution",
+  "reason": "golden 'has improved to twenty-two' vs candidate 'has input 22'"
+ },
+ "en_mx_17": {
+  "text": "That's not bad, that's not bad. I dealt with commercial banks before the rates are terrible. They have to go through a bank for this one.",
+  "finals": [
+   {
+    "text": "That's not bad, that's not bad. I dealt with commercial banks before the rates are terrible. They have to go through a bank for this one.",
+    "start": 0.8800009536743164,
+    "end": 8.160000953674317
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 557.7422078931704,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.25,
+  "fillers_total": 0,
+  "fillers_hit": 0,
+  "pass": false,
+  "error_type": "content_substitution",
+  "reason": "golden 'Do I have to go to our bank' (question) vs candidate 'They have to go through a bank' (statement)"
+ },
+ "en_mx_18": {
+  "text": "Okay. Okay. And just. Just give me a sec. I want to check if I have all the. All the information. Yes.",
+  "finals": [
+   {
+    "text": "Okay. Okay. And just. Just give me a sec. I want to check if I have all the. All the information.",
+    "start": 1.6000011920928956,
+    "end": 9.200001192092895
+   },
+   {
+    "text": "Yes.",
+    "start": 9.680001192092895,
+    "end": 9.760001192092895
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 899.5833329390734,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.047619047619047616,
+  "fillers_total": 4,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_sg_19": {
+  "text": "Yeah. Okay. If I can even smell her, it'll be nice. I don't need to talk to her. If she walk past me there, I can take a smell of breath.",
+  "finals": [
+   {
+    "text": "Yeah.",
+    "start": 1.84,
+    "end": 1.9200000000000002
+   },
+   {
+    "text": "Okay. If I can even smell her, it'll be nice. I don't need to talk to her.",
+    "start": 2.8,
+    "end": 7.12
+   },
+   {
+    "text": "If she walk past me there, I can take a smell of breath.",
+    "start": 8.08,
+    "end": 11.120000000000001
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 693.2761250063777,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.14705882352941177,
+  "fillers_total": 3,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved; 'her' dropped from 'smell of her breath'."
+ },
+ "en_sg_20": {
+  "text": "To use any of our furniture. You know, my boss prove very, very a bit near the one who want to. You understand?",
+  "finals": [
+   {
+    "text": "To use any of our furniture. You know, my boss prove very, very a bit near the one who want to. You understand?",
+    "start": 0.8,
+    "end": 8.96
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 753.2923750113696,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.5294117647058824,
+  "fillers_total": 1,
+  "fillers_hit": 0,
+  "pass": false,
+  "error_type": "negation",
+  "reason": "golden 'he don't want, he don't want to' vs candidate 'the one who want to' (negation lost)"
+ },
+ "en_us_aave_21": {
+  "text": "For me to give them control of my computer because I don't know what they're looking at. Looking at when they have my computer, I can't see because I'm sharing my screen",
+  "finals": [
+   {
+    "text": "For me to give them control of my computer because I don't know what they're looking at. Looking at when they have my computer, I can't see because I'm sharing my screen",
+    "start": 1.52,
+    "end": 10.799999999999999
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 1211.684750043787,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.058823529411764705,
+  "fillers_total": 1,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_us_aave_22": {
+  "text": "Oh, hold on, let me look, ma'am. No, you didn't tell me. You just. Okay. I thought you was going, at least tell me you were sending it to me. But",
+  "finals": [
+   {
+    "text": "Oh, hold on, let me look, ma'am. No, you didn't tell me. You just. Okay. I thought you was going, at least tell me you were sending it to me.",
+    "start": 1.76,
+    "end": 10.56
+   },
+   {
+    "text": "But",
+    "start": 11.6,
+    "end": 11.68
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 1550.2585410140455,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.03125,
+  "fillers_total": 1,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_us_general_23": {
+  "text": "Hi Susan. I'm a client on your bank. I would like to request for a transfer from my savings to check to my checking account.",
+  "finals": [
+   {
+    "text": "Hi Susan.",
+    "start": 0.96,
+    "end": 1.44
+   },
+   {
+    "text": "I'm a client on your bank. I would like to request for a transfer from my savings to check to my checking account.",
+    "start": 3.12,
+    "end": 11.120000000000001
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 809.0597919654101,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.13793103448275862,
+  "fillers_total": 3,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_us_general_24": {
+  "text": "No, thank you so much. Well, my concerns are addressed. I like your company. Your company is very",
+  "finals": [
+   {
+    "text": "No, thank you so much. Well, my concerns are addressed.",
+    "start": 1.2800009536743164,
+    "end": 4.800000953674316
+   },
+   {
+    "text": "I like your company. Your company is very",
+    "start": 7.040000953674316,
+    "end": 8.960000953674317
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 611.8757080985233,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.14285714285714285,
+  "fillers_total": 3,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_us_southern_25": {
+  "text": "Okay. Great. Okay so Ow so Oh sorry Brittany With two teeth",
+  "finals": [
+   {
+    "text": "Okay.",
+    "start": 0.96,
+    "end": 1.04
+   },
+   {
+    "text": "Great.",
+    "start": 2.64,
+    "end": 2.72
+   },
+   {
+    "text": "Okay so",
+    "start": 3.76,
+    "end": 4.72
+   },
+   {
+    "text": "Ow so",
+    "start": 5.28,
+    "end": 5.76
+   },
+   {
+    "text": "Oh sorry Brittany",
+    "start": 9.92,
+    "end": 11.92
+   },
+   {
+    "text": "With two teeth",
+    "start": 13.52,
+    "end": 14.719999999999999
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 1240.5472908867523,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.15384615384615385,
+  "fillers_total": 4,
+  "fillers_hit": 0,
+  "pass": false,
+  "error_type": "number_or_entity",
+  "reason": "golden 'Brittany with two T' vs candidate 'Brittany With two teeth'"
+ },
+ "en_us_southern_26": {
+  "text": "Kelly, I don't have anything else. I really appreciate it. And if everything goes, like you said, we'll be very happy with this.",
+  "finals": [
+   {
+    "text": "Kelly, I don't have anything else. I really appreciate it. And if everything goes, like you said, we'll be very happy with this.",
+    "start": 1.44,
+    "end": 10.879999999999999
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 688.5772090172395,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.25,
+  "fillers_total": 3,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "'we'll' for 'I will' is minor; intent kept."
+ },
+ "en_za_27": {
+  "text": "Okay, okay. All right. Thank you for consolidating that. Thanks again. I'll see you on Friday morning.",
+  "finals": [
+   {
+    "text": "Okay, okay.",
+    "start": 1.1200009536743165,
+    "end": 1.6000009536743165
+   },
+   {
+    "text": "All right. Thank you for consolidating that. Thanks again. I'll see you on Friday morning.",
+    "start": 3.760000953674316,
+    "end": 8.320000953674317
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 574.2592909373343,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.10526315789473684,
+  "fillers_total": 3,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ },
+ "en_za_28": {
+  "text": "But I never received them in my email address and the event is in two days time. So I'm really worried. Perhaps they won't allow me to go in",
+  "finals": [
+   {
+    "text": "But I never received them in my email address and the event is in two days time. So I'm really worried. Perhaps they won't allow me to go in",
+    "start": 0.8000011920928956,
+    "end": 9.760001192092897
+   }
+  ],
+  "revised_finals": 0,
+  "out_of_order": false,
+  "latency_ms": 1075.0358329387382,
+  "needed_flush": false,
+  "error": null,
+  "wer": 0.034482758620689655,
+  "fillers_total": 1,
+  "fillers_hit": 0,
+  "pass": true,
+  "error_type": "none",
+  "reason": "Meaning preserved."
+ }
+}

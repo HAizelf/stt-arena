@@ -1,0 +1,16 @@
+[project]
+name = "stt-arena"
+version = "0.1.0"
+description = "Evaluate streaming speech-to-text providers against human-verified ground truth, with an LLM judge and a review dashboard."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "livekit-agents==1.8.8",   # LiveKit Inference: one API key for many STT providers
+    "python-dotenv>=1.0",
+    "anthropic>=1.0",          # LLM judge
+    "pydantic>=2.6",
+]
+
+[tool.uv]
+package = false

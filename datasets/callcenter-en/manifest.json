@@ -1,0 +1,394 @@
+[
+ {
+  "id": "en_au_01",
+  "accent": "en-AU",
+  "domain": "entertainment",
+  "gender": "female",
+  "reference": "It's this Saturday night, the fourteenth of December at seven thirty. I wish I could make it, I bought the tickets about three weeks ago.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_AU_Entertainment_1592670_channel2.wav",
+   "accent": "en-AU",
+   "start": 84.74,
+   "end": 91.84
+  }
+ },
+ {
+  "id": "en_au_02",
+  "accent": "en-AU",
+  "domain": "energy",
+  "gender": "female",
+  "reference": "I guess that depends on the day. (um) I guess I have, like, my friends come over for a cup of tea sometimes, and I don't work anymore, so (um)",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_AU_Energy_1593471_channel2.wav",
+   "accent": "en-AU",
+   "start": 266.64,
+   "end": 275.84
+  }
+ },
+ {
+  "id": "en_ca_03",
+  "accent": "en-CA",
+  "domain": "realestate",
+  "gender": "male",
+  "reference": "(Uh) I just got it yeah so that should be good (um) okay, then I think that's everything (uh) I need for you from you (um) if this",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_CA_RealEstate_1588709_channel2.wav",
+   "accent": "en-CA",
+   "start": 480.04,
+   "end": 489.14
+  }
+ },
+ {
+  "id": "en_ca_04",
+  "accent": "en-CA",
+  "domain": "insurance",
+  "gender": "female",
+  "reference": "Yep (uh,) two zero four four three one nine nine eight eight.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_CA_Insurance_1590855_channel2.wav",
+   "accent": "en-CA",
+   "start": 573.14,
+   "end": 584.44
+  }
+ },
+ {
+  "id": "en_cn_05",
+  "accent": "en-CN",
+  "domain": "hospitality",
+  "gender": "female",
+  "reference": "It's no problem. (Um,) My name is Linda Zhang, Z H A N G. (Um,) The days were next Friday to next Sunday. S~ (Uh,) total is three nights.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_CN_Hospitality_1584532_channel2.wav",
+   "accent": "en-CN",
+   "start": 52.34,
+   "end": 65.57
+  }
+ },
+ {
+  "id": "en_cn_06",
+  "accent": "en-CN",
+  "domain": "health",
+  "gender": "male",
+  "reference": "I see. (uh) Okay. Also, my (uh) la~ (uh) my last (uh) lab test was (uh) six months ago. Do I need",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_CN_Health_1584625_channel2.wav",
+   "accent": "en-CN",
+   "start": 334.24,
+   "end": 344.24
+  }
+ },
+ {
+  "id": "en_gb_07",
+  "accent": "en-GB",
+  "domain": "technology",
+  "gender": "female",
+  "reference": "No, no, it's definitely definitely not me. I thought I do follow the (uh,) updates to the T and do whatever is asked of me, (er)",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_GB_Technology_1582222_channel2.wav",
+   "accent": "en-GB",
+   "start": 211.62,
+   "end": 220.84
+  }
+ },
+ {
+  "id": "en_gb_08",
+  "accent": "en-GB",
+  "domain": "retail",
+  "gender": "female",
+  "reference": "(um,) I don't know if you can provide sort of any informational check for me on, (um,) sort of the available sizes. (Um,) and what colors you've got in those style jeans?",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_GB_Retail_1582226_channel2.wav",
+   "accent": "en-GB",
+   "start": 90.96,
+   "end": 101.84
+  }
+ },
+ {
+  "id": "en_gb_sct_09",
+  "accent": "en-GB_SCT",
+  "domain": "travel",
+  "gender": "male",
+  "reference": "No worries, so, (um,) Mark Douglas, M-A-R-C, (um,) Douglas is D-O-U-G-L-A-S. (um)",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_GB_SCT_Travel_1593184_channel2.wav",
+   "accent": "en-GB_SCT",
+   "start": 498.44,
+   "end": 506.44
+  }
+ },
+ {
+  "id": "en_gb_sct_10",
+  "accent": "en-GB_SCT",
+  "domain": "deliveryservice",
+  "gender": "female",
+  "reference": "That's right. Can I just ask that you do not call me in between three and four if (um) you know if they",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_GB_SCT_DeliveryService_1593665_channel2.wav",
+   "accent": "en-GB_SCT",
+   "start": 587.04,
+   "end": 595.74
+  }
+ },
+ {
+  "id": "en_gb_wls_11",
+  "accent": "en-GB_WLS",
+  "domain": "finance",
+  "gender": "male",
+  "reference": "(um,) no, I think that's everything. (um) Is it possible for me to give you guys a call back if I need any help?",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_GB_WLS_Finance_1593281_channel2.wav",
+   "accent": "en-GB_WLS",
+   "start": 607.54,
+   "end": 615.74
+  }
+ },
+ {
+  "id": "en_gb_wls_12",
+  "accent": "en-GB_WLS",
+  "domain": "food",
+  "gender": "male",
+  "reference": "different activities, we're only really putting aside about an hour to get these two hundred people from one room at the center",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_GB_WLS_Food_1587936_channel2.wav",
+   "accent": "en-GB_WLS",
+   "start": 182.34,
+   "end": 190.94
+  }
+ },
+ {
+  "id": "en_ie_13",
+  "accent": "en-IE",
+  "domain": "aviation",
+  "gender": "male",
+  "reference": "Ohh, I didn't know you're able to do that. Could you hold it for twenty-four hours? I (uh) just need to double check the conference schedule to make sure I don't miss anything important on the that Wednesday morning that I won't be there for.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_IE_Aviation_1586653_channel2.wav",
+   "accent": "en-IE",
+   "start": 597.24,
+   "end": 606.64
+  }
+ },
+ {
+  "id": "en_ie_14",
+  "accent": "en-IE",
+  "domain": "banking",
+  "gender": "female",
+  "reference": "Fidelma, and I know we can't do it all at once. (uh) When I was in there with your Gerry, he was telling me about the daily transfer limit, but I'm sure I can't remember.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_IE_Banking_1590956_channel2.wav",
+   "accent": "en-IE",
+   "start": 188.44,
+   "end": 198.04
+  }
+ },
+ {
+  "id": "en_in_15",
+  "accent": "en-IN",
+  "domain": "telecom",
+  "gender": "female",
+  "reference": "But the thing is, there’s a problem. I have already recharged my Airtel just (uh) four five hours ago for one month plan.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_IN_Telecom_004_20250917_channel1.wav",
+   "accent": "en-IN",
+   "start": 113.84,
+   "end": 122.7
+  }
+ },
+ {
+  "id": "en_in_16",
+  "accent": "en-IN",
+  "domain": "telecom",
+  "gender": "female",
+  "reference": "Okay. So now, yeah yeah, okay what I did has improved to twenty-two and twenty-one MBPS. Still not twenty-five but it has improved.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_IN_Telecom_003_20250917_channel1.wav",
+   "accent": "en-IN",
+   "start": 528.04,
+   "end": 538.54
+  }
+ },
+ {
+  "id": "en_mx_17",
+  "accent": "en-MX",
+  "domain": "agriculture",
+  "gender": "female",
+  "reference": "That's no bad that's not bad, I've dealt with commercial banks before and the rates are terrible! Do I have to go to our bank for this one?",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_MX_Agriculture_1586739_channel2.wav",
+   "accent": "en-MX",
+   "start": 287.54,
+   "end": 295.54
+  }
+ },
+ {
+  "id": "en_mx_18",
+  "accent": "en-MX",
+  "domain": "agriculture",
+  "gender": "female",
+  "reference": "(uh) OK, OK. (um) Just just (uh) give me a sec, (uh) I want to check if I have all the all the information, yes?",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_MX_Agriculture_1587132_channel2.wav",
+   "accent": "en-MX",
+   "start": 724.1,
+   "end": 733.47
+  }
+ },
+ {
+  "id": "en_sg_19",
+  "accent": "en-SG",
+  "domain": "entertainment",
+  "gender": "male",
+  "reference": "Yeah. Okay. (uh) If I can even smell her, it will be nice. (uh) I don't need to to talk to her. If she walk past me, then I can take a smell of her breath. (uh) .",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_SG_Entertainment_1592404_channel2.wav",
+   "accent": "en-SG",
+   "start": 182.6,
+   "end": 193.64
+  }
+ },
+ {
+  "id": "en_sg_20",
+  "accent": "en-SG",
+  "domain": "food",
+  "gender": "male",
+  "reference": "to use any of our furnitures you know my boss is also very very (uh) a big you know, with some things he don't want, he don't want to you know, right, you understand lah?",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_SG_Food_1586744_channel2.wav",
+   "accent": "en-SG",
+   "start": 623.94,
+   "end": 632.74
+  }
+ },
+ {
+  "id": "en_us_aave_21",
+  "accent": "en-US_Aave",
+  "domain": "technology",
+  "gender": "female",
+  "reference": "Give for me to give them control of my computer. (um) 'Cause I don't know what they're looking at, looking at when they have my computer. I can't see, because I'm, I'm sharing my screen.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_US_Aave_Technology_1589005_channel2.wav",
+   "accent": "en-US_Aave",
+   "start": 275.22,
+   "end": 286.38
+  }
+ },
+ {
+  "id": "en_us_aave_22",
+  "accent": "en-US_Aave",
+  "domain": "banking",
+  "gender": "female",
+  "reference": "Ohh, hold on. Let me look, ma'am. No, you didn't tell me. You just, okay (uh.) I thought you was gonna at least tell me you were sending it to me, but",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_US_Aave_Banking_1591807_channel2.wav",
+   "accent": "en-US_Aave",
+   "start": 409.69,
+   "end": 420.24
+  }
+ },
+ {
+  "id": "en_us_general_23",
+  "accent": "en-US_General",
+  "domain": "banking",
+  "gender": "male",
+  "reference": "Hi, Susan. (Um.) I'm a, I'm a client (uh) on your bank. (Uh) I would like to to request for a transfer from my savings to to check to my checking account.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_US_General_Banking_1587700_channel2.wav",
+   "accent": "en-US_General",
+   "start": 19.57,
+   "end": 30.69
+  }
+ },
+ {
+  "id": "en_us_general_24",
+  "accent": "en-US_General",
+  "domain": "entertainment",
+  "gender": "male",
+  "reference": "No, thank you so much. (uh) well my concerns are are addressed (uh) you know I like your company, your company is very (um)",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_US_General_Entertainment_1587931_channel2.wav",
+   "accent": "en-US_General",
+   "start": 723.99,
+   "end": 733.79
+  }
+ },
+ {
+  "id": "en_us_southern_25",
+  "accent": "en-US_Southern",
+  "domain": "retail",
+  "gender": "female",
+  "reference": "Okay. (uh) Okay, great. (um) Okay, so. Ow. So, (um) ohh, sorry. (um) Brittany with two T.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_US_Southern_Retail_1588126_channel2.wav",
+   "accent": "en-US_Southern",
+   "start": 263.68,
+   "end": 277.64
+  }
+ },
+ {
+  "id": "en_us_southern_26",
+  "accent": "en-US_Southern",
+  "domain": "aviation",
+  "gender": "male",
+  "reference": "(ah) Kelly, I I don't have anything else. I really appreciate it. And if everything goes (um) like you say it I wi~ will be very happy with this. So (um)",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_US_Southern_Aviation_1593139_channel2.wav",
+   "accent": "en-US_Southern",
+   "start": 376.44,
+   "end": 388.54
+  }
+ },
+ {
+  "id": "en_za_27",
+  "accent": "en-ZA",
+  "domain": "health",
+  "gender": "female",
+  "reference": "Okay, okay. (um.) Alright alright, thank you for consolidating that. (Uh,) thanks again. (Um,) I'll see you on Friday morning.",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_ZA_Health_1589064_channel1.wav",
+   "accent": "en-ZA",
+   "start": 597.24,
+   "end": 605.84
+  }
+ },
+ {
+  "id": "en_za_28",
+  "accent": "en-ZA",
+  "domain": "entertainment",
+  "gender": "female",
+  "reference": "But I never receive them in my e-mail address and the event is in two days time, so I'm really worried. Perhaps they won't allow me to go in (um)",
+  "source": {
+   "dataset": "apptek-com/apptek_callcenter_dialogues",
+   "file": "audio/en_ZA_Entertainment_1582977_channel2.wav",
+   "accent": "en-ZA",
+   "start": 26.54,
+   "end": 36.24
+  }
+ }
+]

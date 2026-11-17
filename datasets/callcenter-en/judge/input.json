@@ -1,0 +1,506 @@
+[
+ {
+  "clip_id": "en_au_01",
+  "golden": "It's this Saturday night, the fourteenth of December at seven thirty. I wish I could make it, I bought the tickets about three weeks ago.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "It's this Saturday night, 14th of December at 7:30. I wish I could make it. I bought the tickets about 3 weeks ago.",
+   "assemblyai-universal-streaming": "It's this Saturday night, 14th of December at 7 30. I wish I could make it. I bought the tickets about three weeks ago.",
+   "cartesia-ink-2": "It's this Saturday night, 14th of December at 7:30. I wish I could make it. I bought the tickets about three weeks ago.",
+   "cartesia-ink-whisper": "It's this Saturday night, 14th of December at 7.30. I wish I could make it. I bought the tickets about three weeks ago.",
+   "deepgram-flux-en": "It's this Saturday night, fourteenth of December, at seven thirty. I wish I could make it. I bought the tickets about three weeks ago.",
+   "deepgram-nova-2": "It's this Saturday night, fourteenth of December at 07:30. I wish I could make it. I bought the tickets about three weeks ago.",
+   "deepgram-nova-3": "It's this Saturday night, fourteenth of December at 07:30. I wish I could make it. I bought the tickets about three weeks ago.",
+   "google-gemini-3.5-live": "It's this Saturday night, 14th of December at 7:30. I wish I could make it. I bought the tickets about 3 weeks ago.",
+   "inworld-stt-1": "It's this Saturday night, 14th of December at 7:30. I wish I could make it. I bought the tickets about three weeks ago.",
+   "openai-gpt-live": "It's this Saturday night, 14th of December at 7:30. I wish I could make it. I bought the tickets about three weeks ago.",
+   "speechmatics-linden-1": "It's this Saturday night, 14th of December at 730. I wish I could make it. I bought the tickets about three weeks ago.",
+   "xai-stt-2": "It's this Saturday night, 14th of December at 7:30. I wish I could make it. I bought the tickets about three weeks ago."
+  }
+ },
+ {
+  "clip_id": "en_au_02",
+  "golden": "I guess that depends on the day. um I guess I have, like, my friends come over for a cup of tea sometimes, and I don't work anymore, so um",
+  "candidates": {
+   "assemblyai-u3.6-pro": "I guess that depends on the day. I guess I have like my friends come over for a cup of tea sometimes and I don't work anymore. So",
+   "assemblyai-universal-streaming": "I guess that depends on the day. I guess I have my friends come over for a cup of tea sometimes and I don't work anymore.",
+   "cartesia-ink-2": "",
+   "cartesia-ink-whisper": "guess that depends on the day. I guess I have like My friends come over for a cup of tea sometimes. I don't work anymore.",
+   "deepgram-flux-en": "I guess that depends on the day. Um, I guess I have, like, my friends come over for a cup of tea sometimes, and I don't work anymore. So",
+   "deepgram-nova-2": "Guess that depends on the day. Um, I guess I have, like, my friends come over for a cup of tea sometimes, and I don't work anymore. So, um,",
+   "deepgram-nova-3": "I guess that depends on the day. I guess I have, like, my friends come over for a cup of tea sometimes, and I don't work anymore. So",
+   "google-gemini-3.5-live": "I guess that depends on the day. Um I guess I have like my friends come over for a cup of tea sometimes and I don't work anymore, so um",
+   "inworld-stt-1": "I guess that depends on the day um i guess i have like my friends come over for a cup of tea sometimes and i don't work anymore so um.",
+   "openai-gpt-live": "I guess that depends on the day, um, I guess I have like my friends come over for a cup of tea sometimes. And I don't work anymore, so um",
+   "speechmatics-linden-1": "I guess that depends on the day. Um, I guess I have, like, my friends come over for a cup of tea sometimes and I don't work anymore. So, um.",
+   "xai-stt-2": "I guess that depends on the day. I guess I have like my friends come over for a cup of tea sometimes and I don't work anymore, so"
+  }
+ },
+ {
+  "clip_id": "en_ca_03",
+  "golden": "Uh I just got it yeah so that should be good um okay, then I think that's everything uh I need for you from you um if this",
+  "candidates": {
+   "assemblyai-u3.6-pro": "I just got it. Yep. So that should be good. Okay, then I think that's everything I need from you.",
+   "assemblyai-universal-streaming": "I just got it. Yep. So that should be good. Okay, then I think that's everything I need for you from you. If this",
+   "cartesia-ink-2": "",
+   "cartesia-ink-whisper": "Uh, I just got it. Yep. So that should be good. Okay, then I think that's everything I need for you from you. If this...",
+   "deepgram-flux-en": "I just got it. Yep. So that should be good. Okay. Then I think that's everything I need for you... from you. If this",
+   "deepgram-nova-2": "I just got it. Yep. So that should be good. Um, Okay. Then I think that's everything. Uh, I need for you... From you. Um, if this",
+   "deepgram-nova-3": "I just got it. Yep. So that should be good. Okay. Then I think that's everything I need for you... From you. If this",
+   "google-gemini-3.5-live": "I I just got it. Yep, so that should be good. Um okay, then I think that's everything uh I need for you from you. Um if this",
+   "inworld-stt-1": "Uh i just got it yep so that should be good um okay then i think that's everything uh i need for you from you um if this.",
+   "openai-gpt-live": "I, I just got it, yep. So that should be good. Okay, then I think that's everything I need for you, from you. If this",
+   "speechmatics-linden-1": "I just got it. Yep. So that should be good. Um. Okay, then. I think that's everything I need for you from you. Um. If this.",
+   "xai-stt-2": "I just got it. Yep. So that should be good. okay. Then I think that's everything I need for you, from you. if this"
+  }
+ },
+ {
+  "clip_id": "en_ca_04",
+  "golden": "Yep uh, two zero four four three one nine nine eight eight.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Yep. Uh, 204-431-9988.",
+   "assemblyai-universal-streaming": "Yep. 31. 9988.",
+   "cartesia-ink-2": "Uh, 204. 431. 9988.",
+   "cartesia-ink-whisper": "Yep. 204-431. 9922.",
+   "deepgram-flux-en": "Yep. Two zero four. four three one? nine nine eight eight.",
+   "deepgram-nova-2": "Yep. 204. Four three one nine nine eight eight.",
+   "deepgram-nova-3": "Yep. 204. Four three one nine nine eight eight.",
+   "google-gemini-3.5-live": "Yep. 2 0 4 4 3 1 9988",
+   "inworld-stt-1": "Yep. Uh two zero four four three one. Nine nine eight eight.",
+   "openai-gpt-live": "Yep. Choose your  four three one Nine nine eight eight",
+   "speechmatics-linden-1": "Um. 204 for. Three one. Nine. Nine. Eight. Eight.",
+   "xai-stt-2": "Yep. 2 0 4 4 3 1. 9 9 D D."
+  }
+ },
+ {
+  "clip_id": "en_cn_05",
+  "golden": "It's no problem. Um, My name is Linda Zhang, Z H A N G. Um, The days were next Friday to next Sunday. S- Uh, total is three nights.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Yes, no problem. Um, my name is Linda Zhang. Z-H-A-N-G. Um, the dates were next Friday to next Sunday. Uh, total is 3 nights.",
+   "assemblyai-universal-streaming": "Just no problem. My name is Linda Zhang, Zhan G. The dates for next Friday to next Sunday. Total is three nights.",
+   "cartesia-ink-2": "Yes, no problem. Um, my name is Linda Zhang, Z H A N G. Um, the dates for next Friday to next Sunday. Uh, total is 3 nights.",
+   "cartesia-ink-whisper": "Just no problem. My name is Linda. Zhang, C-H-A-N-G. The dates were... next friday to next sunday uh total is three nights",
+   "deepgram-flux-en": "Just no problem. Um, my name is Linda Zhang, c h a n g. Um, the date is for next Friday to next Sunday. total is three nights.",
+   "deepgram-nova-2": "Yes. No problem. Um, my name is Linda Zhang, c h a n g. The days were next Friday to next Sunday. Uh, total is three nights.",
+   "deepgram-nova-3": "Yes. No problem. Um, my name is Linda Zhang, c h a n g. The dates were next Friday to next Sunday. Total is three nights.",
+   "google-gemini-3.5-live": "Just no problem. My name is Linda Zhang, z h a n g. The dates were next Friday to next Sunday. Total is three nights.",
+   "inworld-stt-1": "Yes, no problem. Um, my name is Linda Zhang, Z H A N G. Uh, the dates were next Friday to next Sunday. Uh, total is three nights.",
+   "openai-gpt-live": "Yes, no problem. Um, my name is Linda Zhang C H A N G. The dates were Next Friday to next Sunday. Total is three nights.",
+   "speechmatics-linden-1": "Yes. No problem. Um, my name is. Linda Zhang, ZHANG. Um. The days were. Next Friday to next Sunday. Um, total is three nights.",
+   "xai-stt-2": "Just no problem. my name is Linda Zhang. Z H A N G. The dates were next Friday to next Sunday. Total is three nights."
+  }
+ },
+ {
+  "clip_id": "en_cn_06",
+  "golden": "I see. uh Okay. Also, my uh la- uh my last uh lab test was uh six months ago. Do I need",
+  "candidates": {
+   "assemblyai-u3.6-pro": "I see. Okay. Also, my lap my last lab test was 6 months ago. Do I need",
+   "assemblyai-universal-streaming": "I see. Okay. Also my last lab test was six months ago. Do I Be",
+   "cartesia-ink-2": "I see. Uh, okay. Also, my uh, last uh, my last uh, lab test was uh, 6 months ago. Do I need",
+   "cartesia-ink-whisper": "I see. Okay. Also, my... my last lab. test. was six months ago.",
+   "deepgram-flux-en": "I see. Uh, okay. Also, my lab, uh, my last lab test was, uh, six months ago. Do I be...",
+   "deepgram-nova-2": "I see. Uh, okay. Also, my, uh, lab my last, uh, lab test. Was, uh, six months ago. Do I need",
+   "deepgram-nova-3": "I see. Okay. Also, my lab my last lab test. Was six months ago. Do I need",
+   "google-gemini-3.5-live": "I see. Okay. Also, my last my last lab test was six months ago. Do I need",
+   "inworld-stt-1": "I see uh okay also my uh last uh my last uh lab test was uh six months ago do i.",
+   "openai-gpt-live": "I see, uh, okay, also my, uh Lap. Uh, my last uh lab test What, uh, six months ago. Do I need",
+   "speechmatics-linden-1": "I see. Uh, okay. Also, my, uh. Lab. Uh, my last lab test. Was, uh, six months ago. Do I need.",
+   "xai-stt-2": "I see. okay. Also, my last my last lab test was six months ago. Do I need"
+  }
+ },
+ {
+  "clip_id": "en_gb_07",
+  "golden": "No, no, it's definitely definitely not me. I thought I do follow the uh, updates to the T and do whatever is asked of me, er",
+  "candidates": {
+   "assemblyai-u3.6-pro": "No, no, it's definitely, definitely not me. I thought— I do follow the updates to a T. And do whatever is asked of me. And",
+   "assemblyai-universal-streaming": "No, no, it's definitely not me. I thought I would do follow the updates to the teeth and do whatever is asked of me.",
+   "cartesia-ink-2": "No, no, it's definitely, definitely not me. I I do follow the uh updates to a T and do whatever is asked of me. Uh.",
+   "cartesia-ink-whisper": "No, it's definitely not me. I do follow. the updates to the T. and do whatever is asked of me.",
+   "deepgram-flux-en": "No. No. It's definitely definitely not me. I I do follow the, uh, updates to see and do whatever is asked of me.",
+   "deepgram-nova-2": "No. No. It's definitely definitely not me. I I do follow the, uh, updates to the feed. And do whatever is asked of me.",
+   "deepgram-nova-3": "No. No. It's definitely definitely not me. I I do follow the updates Timothy, and do whatever is asked of me",
+   "google-gemini-3.5-live": "No, no, it's definitely definitely not me. I thought I do follow the updates to the T and do whatever is asked of me.",
+   "inworld-stt-1": "No, no, it's definitely, definitely not me. I follow, I do follow the uh updates to the team and do whatever is asked of me.",
+   "openai-gpt-live": "No, no, it's definitely, definitely not me. I, I do follow the updates to receive And do whatever is asked of me. Ever",
+   "speechmatics-linden-1": "No, no, it's definitely, definitely not me. I, I do follow the, uh, updates to a t. And do whatever is asked of me. Uh. I.",
+   "xai-stt-2": "No, no, it's definitely, definitely not me. I fol- I do follow the updates to the T and do whatever is asked of me."
+  }
+ },
+ {
+  "clip_id": "en_gb_08",
+  "golden": "um, I don't know if you can provide sort of any informational check for me on, um, sort of the available sizes. Um, and what colors you've got in those style jeans?",
+  "candidates": {
+   "assemblyai-u3.6-pro": "I don't know if you can provide sort of any information or check for me on sort of the available sizes and what colours you've got in those style jeans.",
+   "assemblyai-universal-streaming": "I don't know if you can provide sort of any information or check for me on sort of the available sizes and what colors you've got in those style jeans.",
+   "cartesia-ink-2": "Um, I don't know if you can provide sort of any information or check for me on um, sort of the available sizes, um, and what colors you've got in those style jeans.",
+   "cartesia-ink-whisper": "I don't know if you can provide sort of any informational check. me on um sort of the available sizes um and what colors you've got in those style jeans",
+   "deepgram-flux-en": "I don't know if you can provide sort of any informational check for me on sort of the available sizes and what colors you've got in those style jeans.",
+   "deepgram-nova-2": "Um, I don't know if you can provide sort of any information or check for me on um, sort of the available sizes, um, and what colors you've got in those style jeans.",
+   "deepgram-nova-3": "I don't know if you can provide sort of any informational check for me on sort of the available sizes what colors you've got in those style jeans.",
+   "google-gemini-3.5-live": "Um, I don't know if you can provide sort of any information or check for me on um sort of the available sizes um and what colours you've got in those style jeans.",
+   "inworld-stt-1": "Um I don't know if you can provide sort of any information or check for me on um sort of the available sizes um and what colors you've got in those style jeans.",
+   "openai-gpt-live": "Um, I don't know if you can provide sort of any information or check for me on, um, sort of the available sizes and what colours you've got in those style jeans?",
+   "speechmatics-linden-1": "Um, I don't know if you can provide sort of any information or check for me on, um, sort of the available sizes, um, and what colors you've got in those style jeans.",
+   "xai-stt-2": "I don't know if you can provide sort of any information or check for me on sort of the available sizes and what colors you've got in those style jeans."
+  }
+ },
+ {
+  "clip_id": "en_gb_sct_09",
+  "golden": "No worries, so, um, Mark Douglas, M-A-R-C, um, Douglas is D-O-U-G-L-A-S. um",
+  "candidates": {
+   "assemblyai-u3.6-pro": "No worries. So Mark Douglas, M-E-R-C. Douglas is D-O-U-G-L-A-S. Yeah,",
+   "assemblyai-universal-streaming": "Nobody. So Mark Douglas, M-E-R-C Douglas is D-O-U-G-L-A-S.",
+   "cartesia-ink-2": "",
+   "cartesia-ink-whisper": "No worries. So Mark Douglas, M-E-R-C. Douglas is D-O-U-G-L-A-S.",
+   "deepgram-flux-en": "Nobody. So, um, Mark Douglas, m a r c. Um, Douglas is d o u g l a s.",
+   "deepgram-nova-2": "No worries. So, um, Mark Douglas, m a r c. Douglas is d o u g l a s.",
+   "deepgram-nova-3": "Nobody saw... Mark Douglas, m e r c. Douglas is d o u g l a s.",
+   "google-gemini-3.5-live": "No worries. So, um, Mark Douglas, m a r c, um, Douglas is d o u g l a s. Um,",
+   "inworld-stt-1": "No worries so um Mark Douglas M A R C um Douglas is D O U G L A S. Yeah.",
+   "openai-gpt-live": "No worries, so, um, Mark Douglas, MERC Um, Douglas says D O U G L A S. Yeah.",
+   "speechmatics-linden-1": "No worries. So Mark Douglas, MERC. Um. Douglas is DOUGLAS. A.",
+   "xai-stt-2": "Nobody, so Mark Douglas, MERC. Douglas is D O U G L A S."
+  }
+ },
+ {
+  "clip_id": "en_gb_sct_10",
+  "golden": "That's right. Can I just ask that you do not call me in between three and four if um you know if they",
+  "candidates": {
+   "assemblyai-u3.6-pro": "That's fine. Can I just ask that you do not call me in between 3 and 4 if, you know, if",
+   "assemblyai-universal-streaming": "",
+   "cartesia-ink-2": "",
+   "cartesia-ink-whisper": "Can I just ask that you do not call me in between... three and four. you know, if.",
+   "deepgram-flux-en": "was by Clanshark asked that you do not call me in between, um, three and four if, um, you know, if",
+   "deepgram-nova-2": "That's fine. Can I just ask that you do not call me in between, um, three and four if, um, know, if",
+   "deepgram-nova-3": "That's fine. Can I just ask that you do not call me in between, three and four if know, if",
+   "google-gemini-3.5-live": "That's fine. Can I just ask that you do not call me in between um three and four if um you know if",
+   "inworld-stt-1": "That's fine can i just ask that you do not call me in between um three and four if um you know if.",
+   "openai-gpt-live": "Russ  Can I ask that you do not call me in between three and four if You know, if",
+   "speechmatics-linden-1": "That's fine. Can I just ask that you do not call me in between? Um. Three and four. If, um. You know, if.",
+   "xai-stt-2": "That's right. Clients just ask that you do not call me in between three and four if you know, if"
+  }
+ },
+ {
+  "clip_id": "en_gb_wls_11",
+  "golden": "um, no, I think that's everything. um Is it possible for me to give you guys a call back if I need any help?",
+  "candidates": {
+   "assemblyai-u3.6-pro": "No, I think that's everything. Is it possible for me to give you guys a call back if I need any help?",
+   "assemblyai-universal-streaming": "No, I think that's everything. Is it possible for me to give you guys a call back if I need any help?",
+   "cartesia-ink-2": "Um, no, I think that's everything. Um, is it possible for me to give you guys a call back if I need any help?",
+   "cartesia-ink-whisper": "No, I think that's everything. Is it possible for me to give you guys a call? back if I need any help.",
+   "deepgram-flux-en": "No. I think that's everything. Is it possible for me to give you guys a callback if I need any help?",
+   "deepgram-nova-2": "No. I think that's everything. Um, is there possible for me to give you guys a callback if I need any help?",
+   "deepgram-nova-3": "No. I think that's everything. It's a possible for me to give you guys a callback if I need any help?",
+   "google-gemini-3.5-live": "Um, no, I think that's everything. Um, is it possible for me to give you guys a call back if I need any help?",
+   "inworld-stt-1": "Um no i think that's everything um is it possible for me to give you guys a call back if i need any help.",
+   "openai-gpt-live": "Um, no, I think that's everything. Um, is it possible for me to give you guys a call back if I need any help?",
+   "speechmatics-linden-1": "Um, no, I think that's everything. Um, is it possible for me to give you guys a call back if I need any help?",
+   "xai-stt-2": "No, I think that's everything. Is it possible for me to give you guys a call back if I need any help?"
+  }
+ },
+ {
+  "clip_id": "en_gb_wls_12",
+  "golden": "different activities, we're only really putting aside about an hour to get these two hundred people from one room at the center",
+  "candidates": {
+   "assemblyai-u3.6-pro": "activities, we're only really putting aside about an hour to get these 200 people from one room at the center",
+   "assemblyai-universal-streaming": "Activities. We're only really putting aside about an hour to get these 200 people from one room of the center.",
+   "cartesia-ink-2": "activities, we're only really putting aside about an hour to get these 200 people from one room of the center",
+   "cartesia-ink-whisper": "Activities. We're only really putting aside about an hour. to get. These 200 people... from one room in the center.",
+   "deepgram-flux-en": "activities. We're only really putting aside about an hour to get these two hundred people from one room in the center.",
+   "deepgram-nova-2": "Activities We're only really putting aside about an hour to get these 200 people from one room of the center",
+   "deepgram-nova-3": "Activities We're only really putting aside about an hour to get these 200 people from one room at the center",
+   "google-gemini-3.5-live": "activities we're only really putting aside about an hour to get these 200 people from one room of the centre",
+   "inworld-stt-1": "Activities, we're only really putting aside about an hour to get these 200 people from one room of the center.",
+   "openai-gpt-live": "Activities We're only really putting aside about an hour To get These two hundred people From one room in the center.",
+   "speechmatics-linden-1": "Tivities. We're only really putting aside about an hour. To get. These 200 people. From one room of the center.",
+   "xai-stt-2": "Activities. We're only really putting aside about an hour to get these two hundred people. from one room of the center."
+  }
+ },
+ {
+  "clip_id": "en_ie_13",
+  "golden": "Ohh, I didn't know you're able to do that. Could you hold it for twenty-four hours? I uh just need to double check the conference schedule to make sure I don't miss anything important on the that Wednesday morning that I won't be there for.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Oh, I didn't know you're able to do that. Could you hold it for 24 hours? I just need to double-check the conference schedule to make sure I don't miss anything important on that Wednesday morning that I won't be there for.",
+   "assemblyai-universal-streaming": "Oh, I didn't know you're able to do that. Could you hold it for 24 hours? I just need to double check the conference schedule to make sure I don't miss anything important on the, that Wednesday morning. That I won't be there for.",
+   "cartesia-ink-2": "Oh, I didn't know you're able to do that. Could you hold it for 24 hours? I uh, just need to double check the conference schedule to make sure I don't miss anything important on the that Wednesday morning that I won't be there for.",
+   "cartesia-ink-whisper": "Oh, I didn't know you were able to do that. Could you hold her for 24 hours? I just need to double check the conference schedule to make sure I don't miss anything important on the... that Wednesday morning that I won't be there for.",
+   "deepgram-flux-en": "I didn't figure out to do that. Could you hold it every twenty four hours? I, uh, just need to double check the conference schedule to make sure I don't miss anything important on the... that Wednesday morning. I won't be there for.",
+   "deepgram-nova-2": "I didn't know you're able to do that. Could you hold it for twenty four hours? I, uh, just need to double check the conference schedule to make sure I don't miss anything important on the... That Wednesday morning. That I won't be there for.",
+   "deepgram-nova-3": "Oh, I didn't know you're able to do that. Could you hold every twenty four hours? I, uh, just need to double check the conference schedule to make sure I don't miss anything important on the... That Wednesday morning. That I won't be there for.",
+   "google-gemini-3.5-live": "I didn't know you were going to do that. Could you hold it for 24 hours? I just need to double-check the conference schedule to make sure I don't miss anything important on that Wednesday morning that I won't be there for.",
+   "inworld-stt-1": "Oh, I didn't know you were able to do that. Could you hold it for 24 hours? I uh just need to double check the conference schedule to make sure I don't miss anything important on the that Wednesday morning that I won't be there for.",
+   "openai-gpt-live": "Oh, I didn't know you were able to ask, could you hold her for 24 hours? I, uh, just need to double check the conference schedule to make sure I don't miss anything important on the, that Wednesday morning that I won't be there for.",
+   "speechmatics-linden-1": "Oh, I didn't know you're able to do that. Could you hold it for 24 hours? I, uh, just need to double check the conference schedule to make sure I don't miss anything important on the that Wednesday morning that I won't be there for.",
+   "xai-stt-2": "I didn't know you were overseas. Could you hold it for twenty four hours? I just need to double check the conference schedule to make sure I don't miss anything important on the, that Wednesday morning that I won't be there for."
+  }
+ },
+ {
+  "clip_id": "en_ie_14",
+  "golden": "Fidelma, and I know we can't do it all at once. uh When I was in there with your Gerry, he was telling me about the daily transfer limit, but I'm sure I can't remember.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Fidelma, and I know we can't do it all at once. When I was in there with your Gerry, he was telling me about the daily transfer limit, but sure, I can't remember",
+   "assemblyai-universal-streaming": "Fidelma and I know we can't do it all at once. When I was in there with your Jerry, he was telling me about daily transfer limit, but sure I can't remember.",
+   "cartesia-ink-2": "Fidelma, and I know we can't do it all at once. Uh, when I was in there with your Jerry, he was telling me about daily transfer limits, but sure I can't remember.",
+   "cartesia-ink-whisper": "And I know we can't do it all at once. When I was in there with your Gerry, he was telling me about the daily transfer limit, but I'm sure I can't remember.",
+   "deepgram-flux-en": "for development, and I know we can do it all at once. Uh, when I was in there with you or Jerry, he was telling me about the daily transfer limit, but sure I can't remember.",
+   "deepgram-nova-2": "For Delma, and I know we can't do as all at once. Uh, when I was in there with your, Gerry, he was telling me about daily transfer limit, but sure I can't remember.",
+   "deepgram-nova-3": "Fidelma, and I know we can't do it all at once. Uh, when I was in there with you or Jerry, he was telling me about daily transfer limit, sure I can't remember.",
+   "google-gemini-3.5-live": "for Delma and I know we can't do it all at once. Uh when I was in there with your Jerry, he was telling me about the daily transfer limit, but sure I can't remember.",
+   "inworld-stt-1": "Fidelma and i know we can't do it all at once uh when i was in there with your jerry he was telling me about daily transfer limits but sure i can't remember.",
+   "openai-gpt-live": "For example, and I know we can't do it All at once, when I was in there with your Jerry, he was telling me about the daily transfer limit, but sure I can't remember.",
+   "speechmatics-linden-1": "Fidelma. And I know we can't do it. All at once. When I was in there with your Gerry, he was telling me about daily transfer limits, but I'm sure I can't remember.",
+   "xai-stt-2": "For them, and I know we can't do this. all at once. when I was in there with your Jerry, he was telling me about daily transfer limits, but sure I can't remember."
+  }
+ },
+ {
+  "clip_id": "en_in_15",
+  "golden": "But the thing is, there's a problem. I have already recharged my Airtel just uh four five hours ago for one month plan.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "But the thing is, there is a problem. I have already recharged my Airtel. Just for 5 hours ago. For 1-month plan.",
+   "assemblyai-universal-streaming": "But the thing is there's a problem. I have already recharged my rental. Just for five hours. Ago for one month plan.",
+   "cartesia-ink-2": "But the thing is there is a problem. I have already recharged my Airtel just 4, 5 hours ago for 1 month plan.",
+   "cartesia-ink-whisper": "But the thing is there is a problem. I have already recharged my written just to... Thank you. for one month plan.",
+   "deepgram-flux-en": "But the thing is there's a problem. I have already recharged my Huddl just two or five hours ago for one month plan.",
+   "deepgram-nova-2": "The thing is there's a problem. I have already recharged my. Just four, five hours ago. For one month plan.",
+   "deepgram-nova-3": "The thing is there's a problem. I have already recharged my Airtel. Just to five hours ago. One month plan.",
+   "google-gemini-3.5-live": "But the thing is there is a problem. I have already recharged my Airtel just four, five hours ago for one month plan.",
+   "inworld-stt-1": "But the thing is there's a problem i have already recharged my airtel just four five hours ago for one month plan.",
+   "openai-gpt-live": "But the thing is there's a problem. I have already recharged my Airtel. Just for five hours  ago For one month plan.",
+   "speechmatics-linden-1": "But the thing is, there is a problem. I have already recharged my. Idol just four five hours ago. For one month plan.",
+   "xai-stt-2": "But the thing is, there's a problem. I have already recharged my router just two, four, five hours ago for one month plan."
+  }
+ },
+ {
+  "clip_id": "en_in_16",
+  "golden": "Okay. So now, yeah yeah, okay what I did has improved to twenty-two and twenty-one MBPS. Still not twenty-five but it has improved.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Okay. So now, yeah, I am okay. All right, it has improved. To 22 and 21 Mbps. Still not 25, but it has improved.",
+   "assemblyai-universal-streaming": "Okay. So now here. Okay, overhead it has input 22 and 21 mbps. Still not 25, but it has improved.",
+   "cartesia-ink-2": "Okay. So now yeah, yeah, okay, where I did as improved. to 22 and 21 Mbps. Still not 25, but it has improved.",
+   "cartesia-ink-whisper": "Okay. So now, yeah, yeah, okay, right, it has improved. 222 and 21 mbps Still not 25, but it has improved.",
+   "deepgram-flux-en": "Okay. So now... yeah. Yeah. Okay. What I did, I will book to twenty two and twenty one MBPS. Still not twenty five, but it has improved.",
+   "deepgram-nova-2": "Okay. Ma'am. So now... Yeah. Yeah. Okay. Alright. It has input. To twenty two and twenty one MBPS. Still not 25, but it has improved.",
+   "deepgram-nova-3": "Okay. So now... Yeah. Yeah. Okay. We're ready to have input. To twenty two and twenty one Mbps. Still not 25, but it has improved.",
+   "google-gemini-3.5-live": "Okay. So now yeah yeah okay what I did I input to 22 and 21 Mbps. Still not 25 but it has improved.",
+   "inworld-stt-1": "Okay so now yeah yeah okay our height it has improved to twenty two and twenty one mbps still not twenty five but it has improved.",
+   "openai-gpt-live": "Okay. So now, yeah, yeah, okay, go ahead, it has improved. Two twenty-two and twenty-one Mbps. Still not 25 but it has improved.",
+   "speechmatics-linden-1": "Okay. So now here I am. Okay. All right. It has improved. To 22 and 21 Mbps. Still not 25. But it has improved.",
+   "xai-stt-2": "Okay. So now, yeah, yeah, okay, write it as a note. To 22 and 21 Mbps. Still not 25, but it has improved."
+  }
+ },
+ {
+  "clip_id": "en_mx_17",
+  "golden": "That's no bad that's not bad, I've dealt with commercial banks before and the rates are terrible! Do I have to go to our bank for this one?",
+  "candidates": {
+   "assemblyai-u3.6-pro": "That's not bad. That's not bad. I've dealt with commercial banks before and the rates are terrible. Do I have to go through a bank for this one?",
+   "assemblyai-universal-streaming": "That's not bad, that's not bad. I dealt with commercial banks before the rates are terrible. They have to go through a bank for this one.",
+   "cartesia-ink-2": "That's not bad. That's not bad. I've dealt with commercial banks before. Um, the rates are terrible. Do I have to go through a bank for this one?",
+   "cartesia-ink-whisper": "That's not bad. That's not bad. I've dealt with commercial banks before. The rates are terrible. They have to go through a bank. this one.",
+   "deepgram-flux-en": "That's not bad. That's not bad. I've dealt with commercial banks before, and the rates are terrible. Do I have to go through a bank for this one?",
+   "deepgram-nova-2": "That's not bad. That's not bad. I've dealt with commercial banks before. Um, the rates are terrible. Do I have to go through a bank for this one?",
+   "deepgram-nova-3": "That's not bad. That's not bad. I've dealt with commercial banks before. And the rates are terrible. Do I have to go through a bank for this one?",
+   "google-gemini-3.5-live": "That's not bad. That's not bad. I've dealt with commercial banks before and the rates are terrible. Do I have to go through a bank for this one?",
+   "inworld-stt-1": "That's not bad that's not bad i've dealt with commercial banks before and the rates are terrible do i have to go through a bank for this one.",
+   "openai-gpt-live": "That's not bad, that's not bad. I dealt with commercial banks before and the rates are terrible. They have to go through a bank for this one.",
+   "speechmatics-linden-1": "That's not bad. That's not bad. I've dealt with commercial banks before, and the rates are terrible. Do I have to go through a bank for this one?",
+   "xai-stt-2": "That's not bad, that's not bad. I've dealt with commercial banks before, and the rates are terrible. Do I have to go through a bank for this one?"
+  }
+ },
+ {
+  "clip_id": "en_mx_18",
+  "golden": "uh OK, OK. um Just just uh give me a sec, uh I want to check if I have all the all the information, yes?",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Oh, okay, okay. Um, just, just give me a sec. I want to check if I have all the all the information. Yes.",
+   "assemblyai-universal-streaming": "Okay. Okay. And just. Just give me a sec. I want to check if I have all the. All the information. Yes.",
+   "cartesia-ink-2": "Ah, okay, okay. Um, just, just give me a sec. Uh, I want to check if I have all the all the information, yes?",
+   "cartesia-ink-whisper": "Okay, okay. Just give me a I want to check if I have all the all the information, yes?",
+   "deepgram-flux-en": "Okay. Okay. Just just give me a sec. I want to check if I have all the all the information. Yes?",
+   "deepgram-nova-2": "Okay. Okay. Just just give me a sec. Uh, I want to check if I have all the all the information yet.",
+   "deepgram-nova-3": "Okay. Okay. Just just give me a sec. I want to check if I have all the all the information. Yes?",
+   "google-gemini-3.5-live": "Okay, okay. Um, just just give me a sec. Uh, I want to check if I have all the all the information, yes?",
+   "inworld-stt-1": "Ah, okay, okay. Um, just just give me a sec. Uh, I want to check if I have all the all the information, yes?",
+   "openai-gpt-live": "Oh. Okay, okay, um, just, just give me a sec. Uh, I want to check if I have all the All information yes.",
+   "speechmatics-linden-1": "Okay. Okay. Um, just just give me a sec. Uh, I want to check if I have all the. All the information. Yes.",
+   "xai-stt-2": "Oh, okay, okay. just, just give me a sec. I want to check if I have all the all the information, yes?"
+  }
+ },
+ {
+  "clip_id": "en_sg_19",
+  "golden": "Yeah. Okay. uh If I can even smell her, it will be nice. uh I don't need to to talk to her. If she walk past me, then I can take a smell of her breath. uh .",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Yeah. Okay, if I can even smell her, it would be nice. I don't need to talk to her. If she walk past me, then I can take a smell of her breath.",
+   "assemblyai-universal-streaming": "Yeah. Okay. If I can even smell her, it'll be nice. I don't need to talk to her. If she walk past me there, I can take a smell of breath.",
+   "cartesia-ink-2": "Yeah. Okay, if I can even smell her, it would be nice. I don't need to to talk to her. If she walk past me, then I can take a smell of her breath.",
+   "cartesia-ink-whisper": "Yeah. Okay, if I can even smell her, it be nice. I don't need to talk to her. If she walked past me, I can take a smell of her breath.",
+   "deepgram-flux-en": "Yeah. Okay. I... if I can even spell her, it would be nice. I I don't need to to talk to her. If she will pass me there, I can take a smile of her breath. I was looking.",
+   "deepgram-nova-2": "Yeah. Okay. I... If I can even smell her, it would be nice. Uh, I don't need to to talk to her. If she walk past me, then I can take a smell of her breath. Uh, I was like,",
+   "deepgram-nova-3": "Yeah. Okay. I... If I can even smell her, it would be nice. I I don't need to to talk to her. If she walk past me, I can take a smell of her breath. I was like,",
+   "google-gemini-3.5-live": "Yeah. Okay, if I can even smell her, it would be nice. I don't need to talk to her. If she walks past me, I can take a smell of her breath.",
+   "inworld-stt-1": "Yeah. Okay, if I can even smell her, it would be nice. I don't need to talk to her. If she walks past me, then I can take a smell of her breath as a thing.",
+   "openai-gpt-live": "Yeah. Okay, if I can even smell her, it will be nice. I don't need to talk to her. If she walk past me then take a smell of her breath.",
+   "speechmatics-linden-1": "Okay, if I can even smell her would be nice. I don't need to to talk to her. If she walked past me, then I can take a smell of her breath.",
+   "xai-stt-2": "Yeah. Okay. I, if I can even smell her, it would be nice. I, I don't need to, to talk to her. If she walk past me, then I can take a smell of her breath."
+  }
+ },
+ {
+  "clip_id": "en_sg_20",
+  "golden": "to use any of our furnitures you know my boss is also very very uh a big you know, with some things he don't want, he don't want to you know, right, you understand lah?",
+  "candidates": {
+   "assemblyai-u3.6-pro": "use any of our functions, you know, my boss feel very, very, uh, a bit meow, you know. He shall think, you know, he don't want, he don't want to, you know. You understand?",
+   "assemblyai-universal-streaming": "To use any of our furniture. You know, my boss prove very, very a bit near the one who want to. You understand?",
+   "cartesia-ink-2": "to use any of our furnitures, you know, my boss so very, very uh a bit meow, you know, in sort of thing, you don't want to, you know, you understand lah?",
+   "cartesia-ink-whisper": "use any of our furnitures you know might be very very uh a big meow, you know, in something like you don't want to, you know. You understand that?",
+   "deepgram-flux-en": "to use any of our furnitures. You know, my boss proved very, very... a bit meow, you know, insulting, you know, one who want to, you know... you understand?",
+   "deepgram-nova-2": "Use any of our financials. You know? My boss throw very, very, uh, a big meow. You know? Insulting, uh, the one who going to, you know. You understand?",
+   "deepgram-nova-3": "To use any of our furniture. You know? My boss is very, very... A big me out, you know, in something, you you don't want to... You know? You understand?",
+   "google-gemini-3.5-live": "You use any of our furniture, you know? My boss throw very very uh big you know? You know one who don't you know? You understand",
+   "inworld-stt-1": "To use any of our furnitures you know my boss feel very very uh a bit meow lah you know insulting you know one who don't to you know you only say nah.",
+   "openai-gpt-live": "Use any of our furniture, you know, my boss is very, very a bit miao lah, you know. You short you the one who going to, you know you understand",
+   "speechmatics-linden-1": "We use any of our furniture. You know, my boyfriend very, very, uh, a bit now, you know. Instead of things you don't want, you don't want to, you know, you understand. La.",
+   "xai-stt-2": "We use any of our functions, you know, might go through very, very, a bit meow, you know, in terms of, you know, you don't want to, don't want to, you know, you understand lah."
+  }
+ },
+ {
+  "clip_id": "en_us_aave_21",
+  "golden": "Give for me to give them control of my computer. um 'Cause I don't know what they're looking at, looking at when they have my computer. I can't see, because I'm, I'm sharing my screen.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "give— for me to give them control of my computer, um, because I don't know what they're looking at, looking at when they have my computer. I can't see because I'm, I'm sharing my screen",
+   "assemblyai-universal-streaming": "For me to give them control of my computer because I don't know what they're looking at. Looking at when they have my computer, I can't see because I'm sharing my screen",
+   "cartesia-ink-2": "give for me to give them control of my computer. Um, because I don't know what they're looking at looking at when they have my computer. I can't see because I'm I'm sharing my screen.",
+   "cartesia-ink-whisper": "Thank you. me to give them control of my computer. Because I don't know what they're looking at when they have my. computer I can't see because I'm sharing my screen.",
+   "deepgram-flux-en": "give for me to give them control of my computer, um, because I don't know what they're looking at looking at when they have my computer. I can't see because I'm I'm sharing my screen.",
+   "deepgram-nova-2": "You. Me to give them control of my computer. Um, because I don't know what they're looking at looking at when they have my computer. I can't see because I'm I'm sharing my screen.",
+   "deepgram-nova-3": "You for me to give them control of my computer. Because I don't know what they're looking at looking at when they have my computer. I can't see because I'm I'm sharing my screen",
+   "google-gemini-3.5-live": "give me to give them control of my computer um cuz I don't know what they're looking at looking at when they have my computer I can't see because I'm I'm sharing my screen",
+   "inworld-stt-1": "Give for me to give them control of my computer. Um, because I don't know what they're looking at looking at when they have my computer. I can't see because I'm I'm sharing my screen.",
+   "openai-gpt-live": "You I need to give them control of my computer Um, cause I don't know what they're looking at, looking at when they have my computer. I can't see because I'm, I'm sharing my screen.",
+   "speechmatics-linden-1": "Give me to give them control of my computer. Um, because I don't know what they're looking at. Looking at when they have my computer, I can't see because I'm, I'm sharing my screen.",
+   "xai-stt-2": "Give, for me to give them control of my computer. Cause I don't know what they're looking at, looking at when they have my computer. I can't see because I'm, I'm sharing my screen."
+  }
+ },
+ {
+  "clip_id": "en_us_aave_22",
+  "golden": "Ohh, hold on. Let me look, ma'am. No, you didn't tell me. You just, okay uh. I thought you was gonna at least tell me you were sending it to me, but",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Oh, hold on, let me look, ma'am. No, you didn't tell me, you just Okay. I thought you was gonna at least tell me you were sending it to me, but",
+   "assemblyai-universal-streaming": "Oh, hold on, let me look, ma'am. No, you didn't tell me. You just. Okay. I thought you was going, at least tell me you were sending it to me. But",
+   "cartesia-ink-2": "Oh, hold on, let me look, ma'am. No, you didn't tell me. You just, okay.",
+   "cartesia-ink-whisper": "Oh. Hold on. Let me look, ma'am. No, you didn't tell me. You just... Okay. I thought you was going to at least Tell me you send an to me, but...",
+   "deepgram-flux-en": "Oh, hold on. Let me look, man. No. You didn't tell me. You just... okay. I thought he was gonna at least tell me you were sending it to me, but",
+   "deepgram-nova-2": "Oh, hold on. Let me look, ma'am. No. You didn't tell me. You just okay. I thought you was gonna at least tell me he was sending it to me, but",
+   "deepgram-nova-3": "Oh, hold on. Let me look, ma'am. No. You didn't tell me. You just okay. Ugh. I thought he was gonna at least tell me you were sending it to me, but",
+   "google-gemini-3.5-live": "Oh, hold on. Let me look, ma'am. No, you didn't tell me. You just Okay. I thought you was going to at least tell me you was sending it to me, but",
+   "inworld-stt-1": "Oh, hold on, let me look, ma'am. No, you didn't tell me. You just, okay, uh, I thought you was gonna at least tell me you was sending it to me, but.",
+   "openai-gpt-live": "Oh. Hold on, let me look, ma'am. No, you didn't tell me. You just Okay, uh. I thought you was going at least tell me. You was sending it to me, but",
+   "speechmatics-linden-1": "Hold on. Let me look. Ma'am. No, you didn't tell me. You just. Okay. Oh. I thought you was going to at least tell me you was sending it to me, but.",
+   "xai-stt-2": "Hold on, let me look, man. No, you didn't tell me. You just, okay. I thought. You was going to at least tell me you was sending it to me, but."
+  }
+ },
+ {
+  "clip_id": "en_us_general_23",
+  "golden": "Hi, Susan. Um. I'm a, I'm a client uh on your bank. Uh I would like to to request for a transfer from my savings to to check to my checking account.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Hi Susan. Um, I'm a client on your bank. I would like to request for a transfer from my savings to my checking account.",
+   "assemblyai-universal-streaming": "Hi Susan. I'm a client on your bank. I would like to request for a transfer from my savings to check to my checking account.",
+   "cartesia-ink-2": "Hi Susan. Um, I'm a I'm a client uh on your bank. Uh I would like to to request for a transfer from my savings to to check to my checking account.",
+   "cartesia-ink-whisper": "Bye, Susan. I'm a client on your bank. I would like... to request for a transfer from my savings to check. my checking account.",
+   "deepgram-flux-en": "Hi, Susan. Um, I'm a I'm a client, uh, on your bank. Uh, I would like to to request for a transfer from my savings to to check... to my checking account.",
+   "deepgram-nova-2": "Hi, Susan. Um, Um, I'm a I'm a client, uh, on your bank. Uh, I would like to to request for a transfer from my savings to to check to my checking account.",
+   "deepgram-nova-3": "Hi, Susan. I'm a I'm a client on your bank. I would like to to request for a transfer from my savings to to check to my checking account.",
+   "google-gemini-3.5-live": "Hi Susan, I'm a client on your bank. I would like to request for a transfer from my savings to check to my checking account.",
+   "inworld-stt-1": "Hi Susan um i'm a i'm a client uh on your bank uh i would like to to request for a transfer from my savings to to check to my checking account.",
+   "openai-gpt-live": "Hi Susan. Um, I'm a, I'm a client on your bank. I would like to To request for a transfer from my savings to, to check, to my checking account.",
+   "speechmatics-linden-1": "Susan. Um. I'm a I'm a client, uh, on your bank. Uh, I would like to. To request for a transfer from my savings to to check to my checking account.",
+   "xai-stt-2": "Hi, Susan. I'm a, I'm a client on your bank. I would like to, to request for a transfer from my savings to, to check, to my checking account."
+  }
+ },
+ {
+  "clip_id": "en_us_general_24",
+  "golden": "No, thank you so much. uh well my concerns are are addressed uh you know I like your company, your company is very um",
+  "candidates": {
+   "assemblyai-u3.6-pro": "No, thank you so much. Well, my concerns are addressed. You know, I like your company. Your company is very",
+   "assemblyai-universal-streaming": "No, thank you so much. Well, my concerns are addressed. I like your company. Your company is very",
+   "cartesia-ink-2": "",
+   "cartesia-ink-whisper": "No, thank you so much. Well, my concerns are addressed. I like your company, your company is very",
+   "deepgram-flux-en": "No. Thank you so much. Uh, well, my concerns are are addressed. Uh, you know, uh, I like your company. Your company is very",
+   "deepgram-nova-2": "No. Thank you so much. Uh, well, my concerns are are addressed. Uh, you know, uh, I like your company. Your company is very, um,",
+   "deepgram-nova-3": "No. Thank you so much. Well, my concerns are are addressed. You know, I like your company. Your company is very",
+   "google-gemini-3.5-live": "No, thank you so much. Uh, well, my concerns are are addressed. Uh, you know, I like your company. Your company is very um",
+   "inworld-stt-1": "No, thank you so much. Uh well, my concerns are are addressed. Uh you know uh I like your company. Your company is very um.",
+   "openai-gpt-live": "No, thank you so much. Uh, well, my concerns are, are addressed. Uh, you know, uh, I like your company, your company is very, um",
+   "speechmatics-linden-1": "No, thank you so much. Uh, well, my concerns are addressed. Uh, you know, I like your company. Your company is very, um.",
+   "xai-stt-2": "No, thank you so much. well, my concerns are, are addressed. You know I like your company. Your company is very"
+  }
+ },
+ {
+  "clip_id": "en_us_southern_25",
+  "golden": "Okay. uh Okay, great. um Okay, so. Ow. So, um ohh, sorry. um Brittany with two T.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Okay. Uh, okay, great. Um, okay, so, ow. So, um, Oh, sorry. Um, Brittany, with 2 T's.",
+   "assemblyai-universal-streaming": "Okay. Great. Okay so Ow so Oh sorry Brittany With two teeth",
+   "cartesia-ink-2": "Okay. Uh, okay, great. Um, okay, so, ow. So, um Oh, sorry. Um, Britney with 2 T's.",
+   "cartesia-ink-whisper": "Okay. Oh, Okay, great. Okay, so, ow. So, um. oh sorry um britney With two T's.",
+   "deepgram-flux-en": "Okay. Uh, okay. Great. Um, okay. So so Oh, sorry. Um, Britney with two t.",
+   "deepgram-nova-2": "Okay. Uh, okay. Great. Um, okay. So... Ow. So, um, Oh, sorry. Um, Brittany with two t's.",
+   "deepgram-nova-3": "Okay. Okay. Great. Okay. So... Ow. So oh, sorry. Um, Britney with two t's.",
+   "google-gemini-3.5-live": "Okay. Uh okay, great. Um okay, so Ow. So um Oh, sorry. Um, Brittany with Tutti",
+   "inworld-stt-1": "Okay. Uh, okay, great. Um, okay, so, ow, so, um. Oh, sorry. Um, Brittany with two T.",
+   "openai-gpt-live": "Okay. Uh Uh, okay, great. Um, okay, so, ow, so um Oh, sorry, um, Britney With two T's.",
+   "speechmatics-linden-1": "Okay. Um. Okay. Great. Um. Okay. So. Oh. So, um. Oh, sorry. Um. Brittany. With two teas.",
+   "xai-stt-2": "Okay. okay, great. Okay, so Ow. So Oh, sorry. Brittany. With two T's."
+  }
+ },
+ {
+  "clip_id": "en_us_southern_26",
+  "golden": "ah Kelly, I I don't have anything else. I really appreciate it. And if everything goes um like you say it I wi- will be very happy with this. So um",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Uh, Kelly, I, I don't have anything else. I really appreciate it. And if everything goes, uh, like you said, uh, I will be very happy with this. So um,",
+   "assemblyai-universal-streaming": "Kelly, I don't have anything else. I really appreciate it. And if everything goes, like you said, we'll be very happy with this.",
+   "cartesia-ink-2": "",
+   "cartesia-ink-whisper": "Kelly, I don't have anything else. I really appreciate it. And if everything goes. like you said, we'll be very happy with this. So...",
+   "deepgram-flux-en": "Kelly, I I don't have anything else. I really appreciate it. And if everything goes, uh, like you said, uh, I... we'll we'll be very happy with this. So",
+   "deepgram-nova-2": "Uh, Kelly, uh, I don't have anything else. I really appreciate it. And if everything goes uh, like you said, uh, I... We'll we'll be very happy with this. So um,",
+   "deepgram-nova-3": "Kelly, don't have anything else. I really appreciate it. And if everything goes like you said, I... We'll we'll be very happy with this. So",
+   "google-gemini-3.5-live": "Uh Kelly, I I don't have anything else. I really appreciate it and if everything goes uh like you said, uh I we'll be very happy with this. So um",
+   "inworld-stt-1": "Uh Kelly, I I don't have anything else. I really appreciate it. And if everything goes, um, like you said, uh, I we'll be very happy with this. So, um.",
+   "openai-gpt-live": "Uh, Kelly. I, I don't have anything else. I really appreciate it. And if everything goes like you said I, we'll be very happy with this. So , um",
+   "speechmatics-linden-1": "Uh, Kelly. Uh, I don't have anything else. I really appreciate it. And if everything goes, uh, like you said. Uh, we we'll be very happy with this. So, um.",
+   "xai-stt-2": "Kelly. I, I. I don't have anything else. I really appreciate it. And if everything goes like you said I, we'll, we'll be very happy with this. So"
+  }
+ },
+ {
+  "clip_id": "en_za_27",
+  "golden": "Okay, okay. um. Alright alright, thank you for consolidating that. Uh, thanks again. Um, I'll see you on Friday morning.",
+  "candidates": {
+   "assemblyai-u3.6-pro": "Okay, okay. All right, all right. Thank you for consolidating that. Thanks again. I'll see you on Friday morning.",
+   "assemblyai-universal-streaming": "Okay, okay. All right. Thank you for consolidating that. Thanks again. I'll see you on Friday morning.",
+   "cartesia-ink-2": "Okay, okay. Um, all right, all right. Thank you for consolidating that. Uh, thanks again. Um, I'll see you on Friday morning.",
+   "cartesia-ink-whisper": "Okay, okay. All right, all right. Thank you for consolidating that. Thanks again. I'll see you on Friday morning.",
+   "deepgram-flux-en": "Okay. Okay. Alright. Alright. Thank you for consolidating that. Thanks again. I'll see you on Friday morning.",
+   "deepgram-nova-2": "Okay. Okay. Alright. Alright. Thank you for consolidating that. Uh, thanks again. Um, I'll see you on Friday morning.",
+   "deepgram-nova-3": "Okay. Okay. Alright. Alright. Thank you for consolidating that Thanks again. I'll see you on Friday morning.",
+   "google-gemini-3.5-live": "Okay, okay. All right, all right. Thank you for consolidating that. Thanks again. I'll see you on Friday morning.",
+   "inworld-stt-1": "Okay okay um all right all right thank you for consolidating that uh thanks again um i'll see you on friday morning.",
+   "openai-gpt-live": "Okay, okay, um Oh, all right, all right. Thank you for consolidating that. Thanks again. I'll see you on Friday morning.",
+   "speechmatics-linden-1": "Okay, okay. Um. All right. All right. Thank you for consolidating that. Uh. Thanks again. Um, I'll see you on Friday morning.",
+   "xai-stt-2": "Okay, okay. all right, all right. Thank you for consolidating that. thanks again. I'll see you on Friday morning."
+  }
+ },
+ {
+  "clip_id": "en_za_28",
+  "golden": "But I never receive them in my e-mail address and the event is in two days time, so I'm really worried. Perhaps they won't allow me to go in um",
+  "candidates": {
+   "assemblyai-u3.6-pro": "but I never received them in my email address and the event is in 2 days' time, so I'm really worried. Perhaps they won't allow me to go in, um,",
+   "assemblyai-universal-streaming": "But I never received them in my email address and the event is in two days time. So I'm really worried. Perhaps they won't allow me to go in",
+   "cartesia-ink-2": "",
+   "cartesia-ink-whisper": "but I never received them in my email address and the event is in two days. So I'm really worried. Perhaps they won't allow me to go in.",
+   "deepgram-flux-en": "But I never received them in my email address, and the event is in two days time. So I'm really worried perhaps they won't allow me to go in.",
+   "deepgram-nova-2": "But I re... Never received them in my email address, and the event is in two days time. So I'm really worried Perhaps they won't allow me to go in.",
+   "deepgram-nova-3": "But I never received them in my email address, and the event is in two days time. So I'm really worried. Perhaps they won't allow me to go in",
+   "google-gemini-3.5-live": "But I never received them in my email address and the event is in two days time so I'm really worried perhaps they won't allow me to go in.",
+   "inworld-stt-1": "But i re never received them in my email address and the event is in two days time so i'm really worried perhaps they won't allow me to go in um.",
+   "openai-gpt-live": "But I never received them in my email address and the event is in two days' time, so I'm really worried. Perhaps they won't allow me to go in.",
+   "speechmatics-linden-1": "But I never received them in my email address and the event is in two days time, so I'm really worried. Perhaps they won't allow me to go in. Um.",
+   "xai-stt-2": "But I never received them in my email address, and the event is in two days' time, so I'm really worried. Perhaps they won't allow me to go in"
+  }
+ }
+]
