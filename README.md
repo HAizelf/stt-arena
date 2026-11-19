@@ -1,24 +1,14 @@
 # stt-arena
 
-**Find out which speech-to-text model actually understands *your* users, before they find out for you.**
-
-Stream real audio through a dozen STT providers at once, score them against human-verified ground truth, and let an LLM judge ask the only question that matters: *did it get what the person meant?*
+A small eval harness for streaming speech-to-text. It plays your audio through a dozen STT models in real time, scores each one against human-verified transcripts, and has an LLM judge check whether the meaning survived.
 
 ![The stt-arena dashboard: every clip, its verified golden transcript, and each model's output with a PASS/FAIL verdict](docs/dashboard-data.png)
 
-## Why I built this
+Public leaderboards rank models by word error rate on audiobooks and earnings calls. Real users spell their surnames, read out account numbers and trail off mid-sentence, so the useful eval is one built on your own kind of audio and scored on meaning. The method follows Hamel Husain's [*Your AI Product Needs Evals*](https://hamel.dev/blog/posts/evals/): look at the data, use binary pass/fail, and check the judge against a human.
 
-Picking a speech-to-text provider usually goes like this: you open a leaderboard, sort by word error rate, take the cheapest model near the top, and ship it. Then a customer reads out their phone number and your agent hears *"Choose your four three one…"*.
+## Example results
 
-That's a real transcript from this repo, from a model that sits comfortably in the middle of public leaderboards.
-
-Leaderboards measure audiobooks, podcasts and earnings calls. Your users mumble, spell their surname letter by letter, read out order numbers, say "um" a lot, and trail off mid-sentence. **The only eval that tells you anything is one built on your own kind of audio**, scored on whether the *meaning* survived, not just how many words matched.
-
-I couldn't find a small, honest tool that did that for streaming STT, so I built one. It's deliberately boring: a few dozen clips, ground truth a human has listened to, every provider streamed in real time the way a voice agent would use it, and a judge with a short rubric. It follows the approach in Hamel Husain's [*Your AI Product Needs Evals*](https://hamel.dev/blog/posts/evals/): look at your data, prefer binary pass/fail over vibes, and check the judge against a human.
-
-## What I found
-
-The example dataset in this repo has 28 customer turns from role-played support calls across **14 English accents**: US, AAVE, US Southern, UK, Scottish, Welsh, Irish, Indian, Australian, South African, Singaporean, Chinese, Mexican and Canadian. The clips are full of spelled-out names, account numbers, dates and hesitation.
+The bundled dataset has 28 customer turns from role-played support calls across 14 English accents, full of spelled-out names, account numbers, dates and hesitation.
 
 | Model | Judge pass | WER | Fillers kept | Latency p50 / p95 | Empty turns | $/min | Languages |
 |---|---|---|---|---|---|---|---|
@@ -37,66 +27,26 @@ The example dataset in this repo has 28 customer turns from role-played support 
 
 <sub>One run, 28 clips, streamed through LiveKit Inference in November 2026 with prices from its Scale tier. Judge: Claude Haiku with `prompts/judge.md`. WER ignores fillers and formatting. A 1–2 clip difference is noise, not a ranking.</sub>
 
-A few things surprised me.
-
-**Numbers and names are where models fail.** Half of all failures (41 of 84) were a wrong digit, a garbled name or a mangled spelling. "Z H A N G" became "C H A N G". "Two zero four four three one nine nine eight eight" came back as "204-431. 9922". If your agent takes account numbers, test account numbers.
-
-**Four models tie, and they're nothing alike.** Inworld, Gemini, AssemblyAI's u3.6 pro and Speechmatics all kept the meaning on 25 of 28 clips. Inworld is the cheapest and keeps almost every "um", but it's English-only and finalises slowly. AssemblyAI and Speechmatics answer in about 650 ms and speak dozens of languages. Gemini costs 5× more than Inworld. The judge tells you who's *good enough*; latency, price and languages pick between them.
-
-**Newer isn't automatically better.** Deepgram's nova-3 passed fewer clips than the older nova-2 (19 vs 23) and dropped almost every filler (7% vs 71%). It's still the fastest thing here. On your audio the answer might flip, which is the whole point of running it.
-
-**Some models silently delete every "um".** xAI and AssemblyAI's universal-streaming kept 0 of 56 fillers. That's fine for a search box. It's not fine if you care *how* someone said something: hesitation is signal.
-
-**Turn-aware models can go quiet.** Cartesia's ink-2 decides for itself when you've finished speaking. On 7 clips where the speaker trailed off ("…and I don't work anymore, so um"), it never committed the turn, even after 6 seconds of silence. Its interim transcripts were near-perfect; it just never said "done". Live, that turn would hang until the user spoke again.
-
-**WER and meaning disagree.** Inworld has the best WER and Speechmatics one of the worst among the leaders, yet both pass the same 25 clips. One wrong "not" barely moves WER and changes everything; a dropped "okay" moves WER and changes nothing.
-
-![The Results view](docs/dashboard-results.png)
+Half of all failures (41 of 84) were a wrong digit, a garbled name or a mangled spelling. Four models tie on meaning at 25 of 28 clips, so latency, price and languages decide between them. WER and the judge often disagree: `speechmatics/linden-1` has a worse WER than `deepgram/nova-3` and passes six more clips.
 
 ## How it works
 
-### 1. Ground truth first, verified by a human
+1. **Golden transcripts.** ElevenLabs Scribe drafts a verbatim transcript, with fillers, false starts and stutters kept. You play each clip in the dashboard, fix the draft and press ⌘/Ctrl+Enter to mark it verified. Use a draft model you aren't evaluating, otherwise the golden inherits its mistakes.
+2. **Streaming.** Each clip is played into each model at real-time speed in 20 ms frames, followed by 6 seconds of silence, the way a live voice agent would feed it. The runner keeps every final transcript with its timestamps and records latency (end of speech to the last final), empty turns, finals that only arrived when the stream closed, and revised finals.
+3. **Judging.** An LLM judge reads the golden and each candidate and returns PASS or FAIL: would a support agent understand the customer the same way? A lost negation, a wrong digit or a wrong name fails. Fillers, punctuation and number formatting don't. Every FAIL quotes the two spans it compared.
+4. **Scoring.** WER (normalised so formatting and fillers don't count), filler recall, latency and cost go into `results/_summary.json`. The dashboard shows every clip, its golden and every model's output side by side.
 
-Everything downstream is only as good as the golden transcript, so this is the step I'd tell you not to skip.
+In the bundled dataset the goldens come from the source dataset's own manual verbatim transcripts. The Scribe draft is shown above each one for comparison.
 
-A strong batch model, ElevenLabs Scribe, drafts a **verbatim** transcript: fillers, false starts and stutters included. You open the dashboard, play each clip, click any word to jump to it (low-confidence words are highlighted), fix what's wrong, and press ⌘/Ctrl+Enter to mark it verified. Thirty clips takes about twenty minutes.
+### Why LiveKit Inference
 
-Use a draft model you *aren't* evaluating. Otherwise the golden quietly inherits its mistakes, and it wins.
+Candidates are streamed through [LiveKit Inference](https://docs.livekit.io/agents/models/stt/), which puts all eight providers behind one API key and one streaming interface, so every model gets the same audio, framing, silence and clock.
 
-In the example dataset the goldens come from the source dataset's own manual verbatim transcripts. The Scribe draft sits above each one, and the two disagreed in exactly the places you'd expect: Scribe heard "Zhang Z" as "Chang C".
-
-### 2. Stream every candidate, in real time
-
-Each clip is played into each model at real-time speed in 20 ms frames, followed by 6 seconds of silence, exactly as a live voice agent would feed it. Batch accuracy doesn't predict streaming accuracy, so test the mode you'll ship.
-
-From each stream I keep every final transcript with its timestamps, then measure:
-
-- **latency:** end of speech to the last final transcript;
-- **empty turns:** the model never finalised anything;
-- **needed flush:** it only finalised once the stream was closed;
-- **revised finals:** it re-sent text it had already finalised.
-
-### 3. Judge the meaning, then count the words
-
-The headline metric is a binary verdict from an LLM judge. Given the golden and a candidate, would a support agent understand the customer the same way? A lost negation, a wrong digit or a wrong name is a **FAIL**. Fillers, punctuation, "7:30" vs "seven thirty" and dropped backchannels are not. Every FAIL comes with a reason quoting the two spans, so you can check the judge's work.
-
-WER and filler recall are still there as supporting numbers. WER is normalised so formatting doesn't count: digits, clock times and ordinals become words, and fillers are removed.
-
-### 4. Look at the data
-
-The dashboard puts every clip, its golden and every model's output side by side. Hover a PASS/FAIL chip to see why. Read twenty verdicts and note where you disagree with the judge. If you disagree a lot, the fix is a clearer `prompts/judge.md`, not more data.
-
-## Why LiveKit Inference
-
-Every candidate is streamed through [LiveKit Inference](https://docs.livekit.io/agents/models/stt/), which puts Deepgram, AssemblyAI, Cartesia, Speechmatics, Google, OpenAI, xAI and Inworld behind **one API key and one streaming interface**. That's the only reason it's here: it lets you test a dozen providers at the same time under identical conditions (same audio, same framing, same silence, same clock), without twelve SDKs and twelve accounts.
-
-If you'd rather call providers directly, or test your own pipeline, the runner is the only part that knows about LiveKit. Write any process that produces `results/<model>.json`:
+The runner is the only part that knows about LiveKit. To call providers directly or test your own pipeline, write `results/<model>.json` yourself and the judge, scorer and dashboard work the same:
 
 ```json
 {"clip_id": {"text": "final transcript", "latency_ms": 312, "finals": []}}
 ```
-
-The judge, the scorer and the dashboard work the same either way.
 
 ## Quick start
 
@@ -120,13 +70,13 @@ uv run python scripts/judge.py run      # LLM judge (or `export` / `import` to u
 uv run python scripts/score.py          # WER, filler recall, latency, summary
 ```
 
-Running the full example costs **well under a dollar**: about 90 audio-minutes of LiveKit Inference, including the trailing silence, plus a few cents of judge calls.
+A full run of the example costs under a dollar: about 90 audio-minutes of LiveKit Inference, including the trailing silence, plus a few cents of judge calls.
 
-A few more tools:
+Other tools:
 
 - `run_candidates.py deepgram-nova-3 --clips 2` smoke-tests one model on two clips.
 - `explain_model.py <model>` lists one model's FAILs and its most common substitutions.
-- `debug_events.py <model> <clip>` prints every raw event a provider sends. Reach for it when a number looks wrong.
+- `debug_events.py <model> <clip>` prints every raw event a provider sends.
 
 ## Use your own audio
 
@@ -140,22 +90,18 @@ datasets/my-set/
 
 Point any script at it with `--dataset datasets/my-set`. Then:
 
-1. **Pick 30–50 clips that look like production**, including the hard cases: noisy rooms, accents, numbers, people trailing off.
-2. Draft the goldens and **verify every one by ear**.
-3. Rewrite `prompts/judge.md` for your product. A support bot cares about account numbers; a health app cares about negations and symptoms; a meeting tool cares about names.
+1. Pick 30–50 clips that look like production, including the hard cases: noisy rooms, accents, numbers, people trailing off.
+2. Draft the goldens and verify every one by ear.
+3. Rewrite `prompts/judge.md` for your product. A support bot cares about account numbers, a health app about negations and symptoms, a meeting tool about names.
 4. Edit `models.json` to choose candidates. Any [LiveKit Inference STT model](https://docs.livekit.io/agents/models/stt/) works, with provider options in `extra_kwargs`.
 
-## Things that bit me
+## Known gaps and gotchas
 
-**Too little silence makes good models look broken.** My first run streamed 3 seconds of silence after each clip. Cartesia ink-2 came back empty on 9 of 28 clips: 38% WER, dead last. Its turn timeout is 5.6 seconds, so I was hanging up before it answered. With 6 seconds, only 2 of those 9 came back, so the 7 that never finalised are a real finding, not an artefact. If a model looks absurdly bad, check your harness before you blame the model.
-
-**Latency only compares like with like.** Turn-aware models (Deepgram Flux, Cartesia ink-2, AssemblyAI u3, Inworld) send their final only once they've decided your *turn* is over, so their number includes a turn-taking decision. Phrase-level models like Deepgram Nova finalise each phrase in about 300 ms, but your voice agent then adds its own turn detector on top. If latency decides it for you, measure end of speech to agent reply.
-
-**Providers send finals differently.** Some re-send a turn twice, formatted then unformatted. Some send continuations that all start at zero. Some send no timestamps. `scripts/assemble.py` detects revisions by text, not timestamps, and keeps arrival order, because that's what your agent actually sees. If a provider re-sends a turn, the "revised finals" column flags it: live, your agent may receive that text twice.
-
-**The judge is a model too.** It made a few calls I'd argue with: "Brittany" vs "Britney" counts as a wrong name, which is right if the agent types it into a CRM and pedantic otherwise. Read the reasons. If you disagree on more than a couple, tighten the rubric and re-run.
-
-**28 clips catch patterns, not decimals.** This size reliably shows that a model drops every filler or mangles digits. It can't tell 89% from 86%.
+- **Trailing silence.** Too little makes good models look broken. With 3 seconds, Cartesia ink-2 (5.6 s end-of-turn timeout) came back empty on 9 of 28 clips. The default is 6 seconds (`--tail`). If a model looks absurdly bad, check the harness first.
+- **Latency compares like with like.** Turn-aware models (Deepgram Flux, Cartesia ink-2, AssemblyAI u3, Inworld) send a final only once they decide the turn is over, so their number includes a turn-taking decision. Phrase-level models like Deepgram Nova finalise in about 300 ms, but your agent then adds its own turn detector.
+- **Providers send finals differently.** Some re-send a turn, some send no timestamps. `scripts/assemble.py` detects revisions by text and keeps arrival order, and the "revised finals" column flags re-sent turns.
+- **The judge is a model too.** It counts "Britney" for "Brittany" as a wrong name. Read the reasons, and if you disagree on more than a couple, tighten `prompts/judge.md` and re-run.
+- **28 clips catch patterns, not decimals.** This size shows that a model drops every filler or mangles digits. It can't tell 89% from 86%.
 
 ## Repo layout
 
