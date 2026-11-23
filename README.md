@@ -25,7 +25,7 @@ The bundled dataset has 28 customer turns from role-played support calls across 
 | `assemblyai/universal-streaming` | **64%** | 16.6% | 0% | 701 / 1550 ms | 1 | 0.0025 | en only |
 | `cartesia/ink-2` | **61%** | 32.5% | 59% | 884 / 3854 ms | 7 | 0.0068 | en only |
 
-<sub>One run, 28 clips, streamed through LiveKit Inference in November 2026 with prices from its Scale tier. Judge: Claude Haiku with `prompts/judge.md`. WER ignores fillers and formatting. A 1–2 clip difference is noise, not a ranking.</sub>
+<sub>One run, 28 clips, streamed through LiveKit Inference with prices from its Scale tier. Judge: Claude Haiku with `prompts/judge.md`. WER ignores fillers and formatting. A 1–2 clip difference is noise, not a ranking.</sub>
 
 Half of all failures (41 of 84) were a wrong digit, a garbled name or a mangled spelling. Four models tie on meaning at 25 of 28 clips, so latency, price and languages decide between them. WER and the judge often disagree: `speechmatics/linden-1` has a worse WER than `deepgram/nova-3` and passes six more clips.
 
